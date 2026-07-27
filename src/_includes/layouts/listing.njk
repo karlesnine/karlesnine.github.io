@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+
+<div class="wrapper">
+
+  {% include "partials/header.njk" %}
+  {% include "partials/nav.njk" %}
+
+  <div class="pane-header">
+    <h2>{{ title }}</h2>
+    <span>{{ collections[collectionName].length }} article{% if collections[collectionName].length > 1 %}s{% endif %}</span>
+  </div>
+
+  <div class="articles-list">
+    {% for article in collections[collectionName] | reverse %}
+    <a href="{{ article.url }}" class="article-row">
+      <div class="ar-meta">
+        {% if article.data.date %}
+        <div>{{ article.data.date | dateFr }}</div>
+        {% endif %}
+      </div>
+      <div class="ar-body">
+        <h3>{{ article.data.title }}</h3>
+        {% if article.data.description %}
+        <p>{{ article.data.description }}</p>
+        {% endif %}
+        {% if article.data.tags %}
+        <div class="ar-tags">
+          {% for tag in article.data.tags %}
+            {% if tag != 'facteurs-humains' and tag != 'ia' and tag != 'cybersecurite' %}
+            <span class="ar-tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  {% include "partials/footer.njk" %}
+
+</div>

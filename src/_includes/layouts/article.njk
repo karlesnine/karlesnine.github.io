@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+
+<div class="wrapper">
+
+  {% include "partials/header.njk" %}
+
+  <!-- Mini nav for article pages -->
+  <nav class="tab-nav">
+    <a href="/">Accueil</a>
+    <a href="/{{ activity }}/">{{ activity }}</a>
+    <a href="/cv/">CV</a>
+    <a href="/a-propos/">À propos</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+
+  <article class="page-content">
+    <h2 class="major">{{ title }}</h2>
+    <p class="article-meta">
+      <span class="article-date">{{ date | dateFr }}</span>
+      {% if activity %}
+      · <a href="/{{ activity }}/" class="article-activity">{{ activity }}</a>
+      {% endif %}
+    </p>
+
+    {{ content | safe }}
+
+    {% if tags %}
+    <div class="article-tags">
+      {% for tag in tags %}
+        {% if tag != 'facteurs-humains' and tag != 'ia' and tag != 'cybersecurite' %}
+        <span class="article-tag">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+
+  <nav class="secondary-nav">
+    {% if previous %}
+      <a href="{{ previous.url }}">← Article précédent</a>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next.url }}">Article suivant →</a>
+    {% endif %}
+  </nav>
+
+  {% include "partials/footer.njk" %}
+
+</div>

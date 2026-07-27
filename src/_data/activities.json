@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "formation-facteurs-humains",
+    "name": "Formation aux facteurs humains IT",
+    "icon": "fa-people-group",
+    "description": "Biais cognitifs, communication, décision d'équipe, management et organisation des processus techniques.",
+    "topics": ["Management", "Biais cognitifs", "Organisation"],
+    "count": 0
+  },
+  {
+    "slug": "formation-ia",
+    "name": "Formation & vulgarisation IA",
+    "icon": "fa-robot",
+    "description": "IA générative, LLMs, prompt engineering, cas d'usage, limites et bonnes pratiques de déploiement.",
+    "topics": ["IA", "LLM", "Prompting"],
+    "count": 0
+  },
+  {
+    "slug": "formation-cybersecurite",
+    "name": "Formation & vulgarisation cybersécurité",
+    "icon": "fa-shield",
+    "description": "Fondamentaux de la sécurité, sensibilisation, menaces, bonnes pratiques et gouvernance.",
+    "topics": ["Cybersécurité", "Sensibilisation", "RGPD"],
+    "count": 0
+  }
+]

@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+
+<div class="wrapper">
+
+  {% include "partials/header.njk" %}
+  {% include "partials/nav.njk" %}
+
+  <!-- Dashboard cards -->
+  <div class="dashboard">
+    {% for activity in activities %}
+      {% include "partials/dash-card.njk" %}
+    {% endfor %}
+  </div>
+
+  <!-- Secondary nav -->
+  <nav class="secondary-nav">
+    <a href="/tous-les-articles/">Tous les articles</a>
+  </nav>
+
+  <!-- Recent articles preview -->
+  {% if collections.allArticles.length > 0 %}
+  <div class="quick-preview">
+    <h3>Derniers articles</h3>
+    <div class="preview-strip">
+      {% for article in collections.allArticles | limit(3) %}
+      <div class="preview-item">
+        <div class="pi-date">{{ article.data.date | dateFr }}</div>
+        <div class="pi-title"><a href="{{ article.url }}">{{ article.data.title }}</a></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% include "partials/footer.njk" %}
+
+</div>

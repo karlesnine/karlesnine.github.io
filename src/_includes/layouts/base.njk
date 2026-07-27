@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  {% if title %}
+  <title>{{ title }} — Karlesnine</title>
+  <meta name="description" content="{{ description or 'Industrialisation et urbanisation des architectures et infrastructures cloud.' }}" />
+  {% else %}
+  <title>Karlesnine</title>
+  <meta name="description" content="Industrialisation et urbanisation des architectures et infrastructures cloud. Passionné par le monitoring, la convergence des métriques techniques / business et le FinOps." />
+  {% endif %}
+
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }} — Karlesnine{% else %}Karlesnine{% endif %}" />
+  <meta property="og:description" content="{{ description or 'Industrialisation et urbanisation des architectures et infrastructures cloud. Passionné par le monitoring, la convergence des métriques techniques / business et le FinOps.' }}" />
+  <meta property="og:type" content="{% if og_type %}{{ og_type }}{% else %}website{% endif %}" />
+  <meta property="og:url" content="https://www.karlesnine.com{{ page.url }}" />
+  <meta property="og:image" content="https://www.karlesnine.com/assets/images/social-card.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if title %}{{ title }} — Karlesnine{% else %}Karlesnine{% endif %}" />
+  <meta name="twitter:description" content="{{ description or 'Industrialisation et urbanisation des architectures et infrastructures cloud.' }}" />
+  <meta name="twitter:image" content="https://www.karlesnine.com/assets/images/social-card.png" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6509175-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-6509175-1');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body class="is-preload">
+
+  {{ content | safe }}
+
+  <!-- BG -->
+  <div id="bg"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>

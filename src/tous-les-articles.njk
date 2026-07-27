@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: Tous les articles
+---
+
+<div class="wrapper">
+
+  {% include "partials/header.njk" %}
+  {% include "partials/nav.njk" %}
+
+  <div class="pane-header">
+    <h2>Tous les articles</h2>
+    <span>{{ collections.allArticles.length }} article{% if collections.allArticles.length > 1 %}s{% endif %}</span>
+  </div>
+
+  <div class="articles-list">
+    {% for article in collections.allArticles %}
+    <a href="{{ article.url }}" class="article-row">
+      <div class="ar-meta">
+        {% if article.data.date %}
+        <div>{{ article.data.date | dateFr }}</div>
+        {% endif %}
+        {% if article.data.activity %}
+        <div style="margin-top:0.3rem;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.25);">{{ article.data.activity }}</div>
+        {% endif %}
+      </div>
+      <div class="ar-body">
+        <h3>{{ article.data.title }}</h3>
+        {% if article.data.description %}
+        <p>{{ article.data.description }}</p>
+        {% endif %}
+        {% if article.data.tags %}
+        <div class="ar-tags">
+          {% for tag in article.data.tags %}
+            {% if tag != 'facteurs-humains' and tag != 'ia' and tag != 'cybersecurite' %}
+            <span class="ar-tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  {% include "partials/footer.njk" %}
+
+</div>

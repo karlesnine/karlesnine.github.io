@@ -1,0 +1,13 @@
+{
+  "name": "karlesnine.com",
+  "version": "2.0.0",
+  "description": "Site statique Karlesnine — 11ty (Design A1)",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "deploy": "npx @11ty/eleventy && cp -r _site/* . && echo 'Deploy: _site copied to root'"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

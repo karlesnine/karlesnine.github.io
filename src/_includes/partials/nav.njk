@@ -1,0 +1,6 @@
+<nav class="tab-nav">
+  <a href="/" class="{% if page.url == '/' %}active{% endif %}">Accueil</a>
+  <a href="/cv/" class="{% if '/cv/' in page.url %}active{% endif %}">CV</a>
+  <a href="/a-propos/" class="{% if '/a-propos/' in page.url %}active{% endif %}">À propos</a>
+  <a href="/contact/" class="{% if '/contact/' in page.url %}active{% endif %}">Contact</a>
+</nav>
