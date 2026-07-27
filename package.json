@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "deploy": "npx @11ty/eleventy && cp -r _site/* . && echo 'Deploy: _site copied to root'"
+    "deploy": "npx @11ty/eleventy && cp -r _site/* . && cp Charles-Christian.Croix.curriculum.vitae.pdf . 2>/dev/null; echo 'Deploy done'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
