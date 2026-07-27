@@ -1670,6 +1670,20 @@ input, select, textarea {
   min-height: 100vh;
 }
 
+/* Prevent the bg flash: always visible on dark */
+.wrapper,
+.page-content,
+.articles-list {
+  background: rgba(0,0,0,0.6);
+  border-radius: 4px;
+}
+.page-content, .articles-list { padding: 1.5rem; margin-top: 1rem; }
+
+/* Darker background overlay for readability */
+body:not(.is-preload) #bg:before {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
 /* Header partial */
 .header {
   text-align: center;
