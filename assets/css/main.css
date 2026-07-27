@@ -1669,7 +1669,6 @@ input, select, textarea {
   padding: 2rem;
   min-height: 100vh;
 }
-body.is-preload .wrapper { opacity: 0; }
 
 /* Header partial */
 .header {
