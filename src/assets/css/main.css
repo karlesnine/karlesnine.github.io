@@ -1695,7 +1695,7 @@ input, select, textarea {
 /* Navigation tabs */
 .tab-nav {
   display: flex; justify-content: center; gap: 1rem;
-  padding: 1.25rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.12);
   flex-wrap: wrap;
 }
@@ -1704,13 +1704,13 @@ input, select, textarea {
 .tab-nav a.active { background: #88c8e8; color: #1e1e1e; border-color: #88c8e8; font-weight: 600; }
 
 /* Dashboard cards */
-.dashboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; padding: 2rem 0; }
-.dash-card { border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 1.75rem 1.25rem; text-align: center; transition: all 0.25s; background: rgba(0,0,0,0.15); text-decoration: none; display: block; }
+.dashboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; padding: 1rem 0; }
+.dash-card { border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 0.5rem 0.5rem; text-align: center; transition: all 0.25s; background: rgba(0,0,0,0.15); text-decoration: none; display: flex; flex-direction: column; }
 .dash-card:hover { border-color: #88c8e8; background: rgba(136,200,232,0.08); transform: translateY(-3px); }
 .dash-card .dash-icon { font-size: 2rem; margin-bottom: 0.75rem; color: #88c8e8; }
 .dash-card h2 { font-weight: 400; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; color: #ffffff; }
 .dash-card .dash-count { display: inline-block; font-size: 0.65rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 0.1rem 0.7rem; color: #ffffff; margin-bottom: 0.75rem; }
-.dash-card p { font-size: 0.75rem; color: #ffffff; line-height: 1.5; }
+.dash-card p { font-size: 0.75rem; color: #ffffff; line-height: 1.5; flex: 1; }
 .dash-card .dash-topics { margin-top: 0.75rem; display: flex; justify-content: center; gap: 0.4rem; flex-wrap: wrap; }
 .dash-card .topic { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.1rem 0.45rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 3px; color: #ffffff; }
 
@@ -1720,7 +1720,7 @@ input, select, textarea {
 .secondary-nav a:hover { color: #88c8e8; }
 
 /* Quick preview strip */
-.quick-preview { margin: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; }
+.quick-preview { margin: 1.5rem 0; }
 .quick-preview h3 { font-weight: 300; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #ffffff; text-align: center; margin-bottom: 1rem; }
 .preview-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .preview-item { border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 0.75rem 1rem; transition: border-color 0.2s; color: #ffffff; }
