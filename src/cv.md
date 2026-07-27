@@ -4,7 +4,9 @@ title: Curriculum vitae
 description: Parcours professionnel de Charles-Christian Croix — Karles
 ---
 
-<span class="image main"><img src="/assets/images/Charles-Christian.Croix_0220.jpg" alt="" /></span>
+<div class="cv-grid">
+
+<div class="cv-text">
 
 <p>Débute l'informatique par l'installation de linux Yggdrasil en 1995</p>
 <p>1994 - 2004: Première partie de carrière dans le support client et le helpdesk<br>
@@ -32,3 +34,11 @@ description: Parcours professionnel de Charles-Christian Croix — Karles
   <li>DHL International: Technicien Helpdesk</li>
   <li>Surcouf: Vendeur</li>
 </ul>
+
+</div>
+
+<div class="cv-photo">
+<img src="/assets/images/Charles-Christian.Croix_0220.jpg" alt="" />
+</div>
+
+</div>
