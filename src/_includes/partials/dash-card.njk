@@ -1,7 +1,7 @@
 <a href="/{{ activity.slug }}/" class="dash-card">
   <div class="dash-icon"><span class="icon {{ activity.icon }}"></span></div>
   <h2>{{ activity.name }}</h2>
-  <div class="dash-count">{{ activity.count }} article{% if activity.count > 1 %}s{% endif %}</div>
+  <div class="dash-count">{{ collections[activity.collection].length }} article{% if collections[activity.collection].length > 1 %}s{% endif %}</div>
   <p>{{ activity.description }}</p>
   <div class="dash-topics">
     {% for topic in activity.topics %}
