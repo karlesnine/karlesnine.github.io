@@ -1,26 +1,26 @@
 [
   {
-    "slug": "formation-facteurs-humains",
-    "collection": "formationFacteursHumains",
-    "name": "Facteurs humains IT",
-    "icon": "fa-people-group",
-    "description": "Biais cognitifs, communication, décision d'équipe et management des processus techniques.",
-    "topics": ["Management", "Biais cognitifs", "Organisation"]
-  },
-  {
     "slug": "formation-ia",
     "collection": "formationIa",
     "name": "Vulgarisation IA",
     "icon": "fa-robot",
-    "description": "IA générative, LLMs, prompt engineering, cas d'usage, limites et bonnes pratiques.",
-    "topics": ["IA", "LLM", "Prompting"]
+    "description": "Vulgarisation IA pour experts métier, approche pragmatique et terrain.",
+    "topics": ["ia-llm", "prompting", "limites"]
   },
   {
     "slug": "formation-cybersecurite",
     "collection": "formationCybersecurite",
-    "name": "Vulgarisation cybersécurité",
+    "name": "Cyber accessible",
     "icon": "fa-shield",
-    "description": "Fondamentaux de la sécurité, sensibilisation aux menaces et gouvernance des risques.",
-    "topics": ["Cybersécurité", "Sensibilisation", "RGPD"]
+    "description": "Culture de la sécurité sans jargon ni technique appliqué.",
+    "topics": ["fondamentaux", "pédagogie", "analogie"]
+  },
+  {
+    "slug": "formation-facteurs-humains",
+    "collection": "formationFacteursHumains",
+    "name": "Facteur humain crise IT",
+    "icon": "fa-people-group",
+    "description": "Gérer une équipe prod comme un cockpit pour éviter le crash.",
+    "topics": ["biais-cognitifs", "suraccident", "résilience"]
   }
 ]
