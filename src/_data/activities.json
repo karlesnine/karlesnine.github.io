@@ -21,6 +21,6 @@
     "name": "Facteur humain crise IT",
     "icon": "fa-people-group",
     "description": "Gérer une équipe prod comme un cockpit pour éviter le crash.",
-    "topics": ["biais-cognitifs", "suraccident", "résilience"]
+    "topics": ["biais", "suraccident", "résilience"]
   }
 ]
