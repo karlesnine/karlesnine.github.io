@@ -15,7 +15,7 @@ npx @11ty/eleventy
 echo "→ Copie des fichiers vers la racine..."
 cp .nojekyll _site/
 cp -r _site/* .
-cp Charles-Christian.Croix.curriculum.vitae.pdf .
+cp Charles-Christian.Croix.curriculum.vitae.pdf . 2>/dev/null || true
 
 echo "→ Git add + commit..."
 git add -A

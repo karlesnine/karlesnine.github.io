@@ -1767,6 +1767,8 @@ input, select, textarea {
 .preview-item .pi-title { font-size: 0.9rem; line-height: 1.3; color: #ffffff; margin-top: 0.2rem; }
 .preview-item .pi-title a { color: #ffffff; text-decoration: none; }
 .preview-item .pi-title a:hover { color: #88c8e8; }
+.preview-item .pi-tags { margin-top: 0.4rem; display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.preview-item .pi-tag { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.03em; padding: 0.05rem 0.3rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 3px; color: #ffffff; white-space: nowrap; }
 
 /* Footer */
 .footer { text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.12); margin-top: 2rem; font-size: 0.8rem; color: #ffffff; }
