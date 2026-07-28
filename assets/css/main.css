@@ -1708,7 +1708,7 @@ input, select, textarea {
 .dash-card { border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 0.5rem 0.5rem; text-align: center; transition: all 0.25s; background: rgba(0,0,0,0.15); text-decoration: none; display: flex; flex-direction: column; }
 .dash-card:hover { border-color: #88c8e8; background: rgba(136,200,232,0.08); transform: translateY(-3px); }
 .dash-card .dash-icon { font-size: 2rem; margin-bottom: 0.75rem; color: #88c8e8; }
-.dash-card h2 { font-weight: 400; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; color: #ffffff; }
+.dash-card h2 { font-weight: 400; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; color: #ffffff; min-height: 2.8em; }
 .dash-card .dash-count { display: inline-block; font-size: 0.65rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 0.1rem 0.7rem; color: #ffffff; margin-bottom: 0.75rem; }
 .dash-card p { font-size: 0.75rem; color: #ffffff; line-height: 1.5; flex: 1; }
 .dash-card .dash-topics { margin-top: 0.75rem; display: flex; justify-content: center; gap: 0.4rem; flex-wrap: wrap; }
