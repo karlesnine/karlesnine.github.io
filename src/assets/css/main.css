@@ -2063,5 +2063,5 @@ input, select, textarea {
 }
 
 [data-theme="light"] #bg {
-  display: none;
+  display: none !important;
 }
