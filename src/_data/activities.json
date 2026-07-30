@@ -6,17 +6,13 @@
     "icon": "fa-robot",
     "description": "Vulgarisation de l'IA pour experts métier, une approche pragmatique et terrain.",
     "topics": ["ia-llm", "prompting", "limites", "droit"],
-    "subtitle": "L'IA expliquée à ceux qui n'en font pas",
-    "audience": "Dirigeants, chefs de projet, RH, juristes, expert métier",
+    "subtitle": "L'IA expliquée à ceux qui n'en font pas, qui doute et qui veulent comprendre",
+    "audience": "Dirigeants, chefs de projet, RH, juristes, expert métier, comptable, assistant, ingénieur",
     "offerings": [
-      "Démystifier les LLMs et l'IA générative",
-      "Comprendre les cas d'usage métier concrets",
-      "Identifier les limites et les risques",
-      "Rédiger des prompts efficaces",
-      "Organiser son travail",
-      "Sortir du mythe de la baguette magique",
-      "Créé des agents avec votre savoir faire",
-      "Être un incompétent conscient"
+      "Démystifier les LLMs et l'IA générative. Comprendre les cas d'usage métier concrets",
+      "Identifier les limites et les risques. Rédiger des prompts efficaces",
+      "Organiser son travail. Sortir du mythe de la baguette magique",
+      "Créé des agents avec votre savoir faire. Être un incompétent conscient"
     ]
   },
   {
@@ -24,21 +20,17 @@
     "collection": "formationCybersecurite",
     "name": "cybersécurité accessible",
     "icon": "fa-shield",
-    "description": "Culture de la sécurité sans jargon ni technique appliqué.",
+    "description": "La culture de la sécurité sans jargon ni technique appliqué.",
     "topics": ["fondamentaux", "pédagogie", "analogie"],
     "subtitle": "La cybersécurité sans jargon pour les équipes terrain",
     "audience": "Managers non-tech, néo-entrepreneurs, Responsable Unique de Sécurité, Manager des risques sûreté et malveillance",
     "offerings": [
-      "Les fondamentaux en langage clair",
-      "Les bonnes pratiques au quotidien",
-      "Réagir face à un incident",
-      "Les interlocuteurs",
-      "Être un incompétent conscient",
-      "Piloter les acteurs opérationnels",
-      "Analyse sûreté risques et des vulnérabilités",
-      "Gérer les ressources dans le cadre du management des risques",
-      "Réagir face à une situation d'urgence et gérer une crise",
-      "Comprendre les obligations réglementaires"
+      "Les fondamentaux en langage clair et les bonnes pratiques au quotidien",
+      "Réagir face à un incident. Les interlocuteurs",
+      "Être un incompétent conscient et piloter les acteurs opérationnels",
+      "Analyse sûreté risques et des vulnérabilités, gérer le cyber comme un incendit ou une effraction ",
+      "Gérer les ressources dans le cadre du management des risques. Comprendre les obligations réglementaires",
+      "Réagir face à une situation d'urgence et gérer une crise"
     ]
   },
   {
@@ -46,15 +38,15 @@
     "collection": "formationFacteursHumains",
     "name": "Facteur humain crise IT",
     "icon": "fa-people-group",
-    "description": "Gérer une équipe prod comme un cockpit pour éviter le crash.",
-    "topics": ["biais", "suraccident", "résilience"],
+    "description": "Gérer une équipe de prod IT comme un équipage dans son cockpit",
+    "topics": ["biais", "suraccident", "résilience", "stress"],
     "subtitle": "Gérer son équipe comme un cockpit pour éviter le crash",
     "audience": "Chefs de projet, managers d'astreinte, direction IT",
     "offerings": [
-      "Comprendre les biais en situation de crise",
-      "Outils de décision sous pression",
-      "Éviter le suraccident",
-      "Renforcer la résilience d'équipe"
+      "Comprendre les biais en situation de crise. Éviter le suraccident",
+      "Outils de décision sous pression. Coordination, filtrage et priorité",
+      "Durer dans la crise. Renforcer la résilience d'équipe",
+      "Contester, proposer, valider et invalider les hypothèses sous adrénaline"
     ]
   }
 ]
