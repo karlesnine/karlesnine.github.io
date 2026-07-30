@@ -4,15 +4,19 @@
     "collection": "formationIa",
     "name": "Vulgarisation IA",
     "icon": "fa-robot",
-    "description": "Vulgarisation IA pour experts métier, approche pragmatique et terrain.",
-    "topics": ["ia-llm", "prompting", "limites"],
+    "description": "Vulgarisation de l'IA pour experts métier, une approche pragmatique et terrain.",
+    "topics": ["ia-llm", "prompting", "limites", "droit"],
     "subtitle": "L'IA expliquée à ceux qui n'en font pas",
-    "audience": "Dirigeants, chefs de projet, RH, juristes, curieux",
+    "audience": "Dirigeants, chefs de projet, RH, juristes, expert métier",
     "offerings": [
       "Démystifier les LLMs et l'IA générative",
       "Comprendre les cas d'usage métier concrets",
       "Identifier les limites et les risques",
-      "Rédiger des prompts efficaces"
+      "Rédiger des prompts efficaces",
+      "Organiser son travail",
+      "Sortir du mythe de la baguette magique",
+      "Créé des agents avec votre savoir faire",
+      "Être un incompétent conscient"
     ]
   },
   {
@@ -23,11 +27,17 @@
     "description": "Culture de la sécurité sans jargon ni technique appliqué.",
     "topics": ["fondamentaux", "pédagogie", "analogie"],
     "subtitle": "La cybersécurité sans jargon pour les équipes terrain",
-    "audience": "Managers non-tech, néo-entrepreneurs, étudiants",
+    "audience": "Managers non-tech, néo-entrepreneurs, Responsable Unique de Sécurité, Manager des risques sûreté et malveillance",
     "offerings": [
       "Les fondamentaux en langage clair",
       "Les bonnes pratiques au quotidien",
       "Réagir face à un incident",
+      "Les interlocuteurs",
+      "Être un incompétent conscient",
+      "Piloter les acteurs opérationnels",
+      "Analyse sûreté risques et des vulnérabilités",
+      "Gérer les ressources dans le cadre du management des risques",
+      "Réagir face à une situation d'urgence et gérer une crise",
       "Comprendre les obligations réglementaires"
     ]
   },
