@@ -17,8 +17,6 @@ description: Charles-Christian Croix alias Karles — parcours professionnel et 
 
 <div class="apropos-bio">
 
-<img src="/assets/images/Charles-Christian.Croix_0191.bis.jpg" alt="Charles-Christian Croix en 2015" class="apropos-photo" />
-
 <p>Bonjour, je suis Charles-Christian Croix mais tout le monde m'appelle <strong>Karles</strong></p>
 
 <p>Ce pseudonyme de Karlesnine ou Karles en abrégé vient de la première fois où j'ai dû me créer un login sur un système unix (HPUX 9.x). Je lisais alors <em>Les Robots</em> de Isaac Asimov ou un des robots s'appelait Robbie 8</p>
@@ -40,9 +38,13 @@ description: Charles-Christian Croix alias Karles — parcours professionnel et 
   <li>Expert Cloud Computing / AWS</li>
 </ul>
 
+<img src="/assets/images/Charles-Christian.Croix_0191.bis.jpg" alt="Charles-Christian Croix en 2015" class="apropos-photo" />
+
 </div>
 
 <div class="apropos-cv">
+
+<img src="/assets/images/Charles-Christian.Croix_0220.jpg" alt="" class="apropos-photo" />
 
 <p>Débute l'informatique par l'installation de linux Yggdrasil en 1995</p>
 <p>1994 - 2004: Première partie de carrière dans le support client et le helpdesk<br>
@@ -70,8 +72,6 @@ description: Charles-Christian Croix alias Karles — parcours professionnel et 
   <li>DHL International: Technicien Helpdesk</li>
   <li>Surcouf: Vendeur</li>
 </ul>
-
-<img src="/assets/images/Charles-Christian.Croix_0220.jpg" alt="" class="apropos-photo" />
 
 </div>
 
