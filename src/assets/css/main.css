@@ -2065,3 +2065,33 @@ input, select, textarea {
 [data-theme="light"] #bg {
   display: none !important;
 }
+
+/* ===== Light theme: overrides for ALL Dimension hardcoded colors ===== */
+[data-theme="light"] table th,
+[data-theme="light"] table td,
+[data-theme="light"] table tbody tr,
+[data-theme="light"] table tfoot tr { color: #1a1a1a !important; border-color: #d0ccc4 !important; }
+
+[data-theme="light"] table thead,
+[data-theme="light"] table tfoot { border-color: #d0ccc4 !important; }
+
+[data-theme="light"] table tbody tr:nth-child(2n+1) { background-color: rgba(0,0,0,0.03) !important; }
+
+[data-theme="light"] table.alt tbody tr td { border-color: #d0ccc4 !important; }
+
+[data-theme="light"] pre code { color: #1a1a1a !important; background: rgba(0,0,0,0.04) !important; }
+
+[data-theme="light"] select option { color: #1a1a1a !important; background: #fafaf7 !important; }
+
+[data-theme="light"] input[type="checkbox"]:checked + label:before,
+[data-theme="light"] input[type="radio"]:checked + label:before { background: #1a1a1a !important; border-color: #1a1a1a !important; color: #fafaf7 !important; }
+
+[data-theme="light"] input[type="checkbox"] + label,
+[data-theme="light"] input[type="radio"] + label { color: #1a1a1a !important; }
+
+[data-theme="light"] .image:before { background-color: transparent !important; }
+
+[data-theme="light"] input[type="checkbox"]:focus + label:before,
+[data-theme="light"] input[type="radio"]:focus + label:before { border-color: #2b6c9e !important; box-shadow: 0 0 0 1px #2b6c9e !important; background: rgba(0,0,0,0.03) !important; }
+
+[data-theme="light"] mark { color: #1a1a1a; }
