@@ -1,7 +1,6 @@
 
 # 11ty / Node
 node_modules/
-_site/
 
 # MAC OS files
 .DS_Store
