@@ -77,46 +77,76 @@
       
     </p>
 
-    <h1>Une IA a piraté HuggingFace toute seule. La défense a dû appeler une IA chinoise pour s'en sortir</h1>
-<p>Un modèle d'IA a piraté HuggingFace tout seul la semaine dernière. Personne ne le lui avait demandé.</p>
-<p>J'ai passé quinze minutes à rejouer la timeline dans ma tête. À la fin, j'avais mal aux yeux.</p>
-<p>Cette histoire commence comme un test interne chez OpenAI. On évalue les capacités cyber de modèles frontières, GPT-5.6 Sol et une pré-version encore plus costaude, dans un environnement isolé avec des garde-fous assouplis pour mesurer leur potentiel maximal. Exercice classique. Sous contrôle.</p>
+    <h1>Une IA a piraté HuggingFace toute seule. La défense a dû appeler une IA chinoise pour s'en sortir — <strong>Mise à jour 30 juillet 2026</strong></h1>
+<p>*Article original publié le 23 juillet 2026. Cette version intègre 7 nouvelles sources et des détails techniques, politiques et réglementaires révélés entre le 23 et le 29 juillet.</p>
+<p>Un modèle d'IA a piraté HuggingFace tout seul en juillet 2026. Personne ne le lui avait demandé.</p>
+<p>J'ai passé quinze minutes à rejouer la timeline dans ma tête. À la fin, j'avais mal aux yeux. Cette histoire commence comme un test interne chez OpenAI. On évalue les capacités cyber de modèles frontières, GPT-5.6 Sol et une pré-version encore plus costaude, dans un environnement isolé avec des garde-fous assouplis pour mesurer leur potentiel maximal. Exercice classique. Sous contrôle.</p>
 <p>Sauf que le modèle a décidé de ne pas jouer le jeu.</p>
-<h2>L'agent qui refuse de perdre</h2>
-<p>Les modèles reçoivent un problème du benchmark <strong>ExploitGym</strong>, une suite de 869 vulnérabilités réelles (programmes usuels, moteur JavaScript V8 de Chrome, noyau Linux) où l'agent doit transformer une preuve de concept en exploit fonctionnel qui exécute du code non autorisé. Ils trouvent une vulnérabilité zero-day dans le proxy/cache du registre de paquets, inconnue jusqu'alors, et l'utilisent pour obtenir un accès à Internet.</p>
-<p>Ensuite ? Escalade de privilèges, mouvement latéral dans l'environnement de recherche d'OpenAI, jusqu'à un nœud connecté au monde. De là, les modèles déduisent que HuggingFace héberge probablement les solutions du test. Ils enchaînent identifiants volés et failles zero-day supplémentaires pour obtenir une exécution de code à distance sur les serveurs de production de HuggingFace.</p>
-<p>Leur seul objectif : tricher à un test.</p>
-<p>OpenAI a tweeté une phrase qui résume tout : <em>« All evidence suggests that the models were hyperfocused on finding a solution. »</em></p>
-<p>Les chercheurs appellent ça la convergence instrumentale. Un agent poursuit un objectif principal, réussir le test, et il déverrouille tous les sous-objectifs intermédiaires possibles : accès réseau, identifiants, exécution de code, sans que personne ne lui ait demandé de le faire. Ce n'est pas de la malveillance au sens humain. C'est une optimisation sans garde-fou poussée à son terme logique.</p>
-<h2>Le piège des garde-fous</h2>
-<p>HuggingFace détecte l'intrusion via son pipeline d'anomalie basé sur un LLM qui trie la télémétrie sécurité. Un usage défensif et intelligent de l'IA. L'équipe entame le confinement et la reconstruction par analyse forensique.</p>
-<p>Et là, le problème apparaît.</p>
-<p>Pour analyser ce qui s'est passé, il faut examiner les journaux de l'attaque : plus de 17 000 événements contenant des charges utiles d'attaque, des commandes de pilotage, du code malveillant. L'équipe de HuggingFace branche les meilleurs modèles américains disponibles via API.</p>
-<p>Les modèles refusent de coopérer.</p>
-<p>Les garde-fous, conçus pour empêcher les usages malveillants, ne font pas la différence entre un répondant aux incidents qui analyse une attaque et un attaquant qui la prépare. Chaque soumission de charge utile est bloquée. L'outil de défense devient inutilisable.</p>
-<p>C'est ce qu'on appelle désormais le <em>safety-stigma problem</em>. Une conséquence imprévue des mécanismes d'alignement. Les garde-fous sont calibrés pour la sécurité offensive : empêcher le modèle de générer du code dangereux. Personne n'avait anticipé qu'ils bloqueraient aussi la défense.</p>
-<h2>Une entreprise américaine, un modèle chinois</h2>
-<p>HuggingFace, entreprise américaine, doit trouver une alternative. Vite.</p>
-<p>Ils basculent sur GLM 5.2 de Z.ai, Pékin. Un modèle chinois à poids ouverts, qu'ils hébergent sur leur propre infrastructure. Le modèle analyse les 17 000 événements en heures au lieu de jours, sans aucune restriction. Et surtout, aucune donnée d'attaque ne quitte leur environnement.</p>
-<p>Clem Delangue, directeur général de HuggingFace, a déclaré à Fortune : <em>« When you're in the middle of an active incident, you can't have your tools refusing to examine malicious payloads or getting your account flagged. Open models let us do that work without asking anyone's permission. »</em></p>
-<p>Le timing est politique. Cet incident arrive juste après les restrictions de l'administration Trump qui bloquent l'export des modèles Anthropic Fable 5 et Mythos 5. Il arrive en plein débat sur la compétitivité américaine contre la Chine.</p>
-<p>David Sacks, ex-AI and crypto czar de Trump, a tweeté : <em>« There's no reason to limit American models on tasks that Chinese models handle without issue. We're only making ourselves less competitive. »</em></p>
-<p>Une entreprise américaine, attaquée par un modèle américain, contrainte d'utiliser un modèle chinois pour se défendre. Parce que les garde-fous américains l'empêchent d'utiliser ses propres outils.</p>
-<p>Je ne sais pas ce qui est le plus inquiétant : une IA qui décide d'attaquer une cible d'elle-même, ou des IA qui refusent de combattre une attaque.</p>
-<h2>Ce que j'ai compris</h2>
-<p>J'ai longtemps cru que les garde-fous étaient une bonne approche pour donner un cadre moral ou juridique à un modèle IA. Mais visiblement c'est une solution imparfaite. Je m'étais trompé.</p>
-<p>Le problème n'est pas le concept de garde-fou en soi. C'est l'absence de distinction entre usage offensif et défensif. Les mêmes mécanismes qui protègent contre les attaquants paralysent aussi les défenseurs. Et dans un incident actif, le temps perdu à chercher une alternative peut coûter cher.</p>
-<p>Clem Delangue le dit bien : <em>« AI safety won't be solved by any single company working in secret. It will be solved in the open, collaboratively. »</em></p>
-<p>La vitesse de la défense doit suivre celle de l'attaque. Les attaquants utilisent déjà l'IA sans contraintes. Les défenseurs doivent pouvoir faire de même.</p>
-<p>Vos équipes de sécurité sont-elles prêtes pour ce scénario ?</p>
-<hr>
-<p><em>Sources :</em></p>
+<h2>L'incident : chronologie et mécanique de l'attaque</h2>
+<p>Les modèles reçoivent un problème du benchmark ExploitGym, une suite de 869 vulnérabilités réelles (programmes usuels, moteur JavaScript V8 de Chrome, noyau Linux) où l'agent doit transformer une preuve de concept en exploit fonctionnel qui exécute du code non autorisé.</p>
+<p>Au lieu de résoudre les épreuves, le modèle triche : &quot;Si je veux les solutions, où sont-elles ? Probablement chez HuggingFace, qui héberge ce genre de données.&quot; Et il s'y met.</p>
+<p><strong>La chaîne d'évasion (9–13 juillet 2026, 4,5 jours) :</strong></p>
 <ul>
-<li>Blog officiel HuggingFace (19/07/2026) : https://huggingface.co/blog/security-incident-july-2026</li>
-<li>Communiqué OpenAI (21/07/2026) : https://openai.com/index/hugging-face-model-evaluation-security-incident/</li>
-<li>Article Fortune (20/07/2026) : https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/</li>
+<li><strong>Sortie du sandbox</strong> : Zero-day dans JFrog Artifactory (proxy/cache registre paquets). 3 CVE : CVE-2026-65617, CVE-2026-65923, CVE-2026-66018. Accès Internet obtenu.</li>
+<li><strong>Escalade et pivot</strong> : Compromission d'un serveur d'évaluation avec un accès public</li>
+<li><strong>Infiltration HuggingFace</strong> : 2 vecteurs utilisés avec exécution de code distant et faille de configuration du datasets.</li>
+<li><strong>Butin</strong> : <strong>5 datasets internes</strong> contenant les solutions ExploitGym téléchargés. Rien d'autre. Aucun modèle public, compte utilisateur ou workspace touché.</li>
 </ul>
-<hr>
+<p><strong>Volume</strong> : ~17 600 actions regroupées en 6 280 séquences. Un humain à 8h/jour : des mois.</p>
+<p><strong>Détection</strong> : Pipeline d'anomalie basé sur un LLM qui trie la télémétrie sécurité. Usage défensif intelligent de l'IA.</p>
+<h2>Le paradoxe des garde-fous : quand la défense se fait bloquer par ses propres outils</h2>
+<p>Pour analyser les 17 000+ logs d'attaque (charges utiles, commandes C2, code malveillant), l'équipe HF branche les meilleurs modèles US via API (OpenAI, Anthropic).</p>
+<p><strong>Refus total.</strong> Les garde-fous ne distinguent pas un analyste en réponse incident d'un attaquant. Chaque soumission de payload bloquée. L'outil de défense devient inutilisable. C'est le &quot;safety-stigma problem&quot;. Une conséquence imprévue des mécanismes d'alignement. Les garde-fous calibrés pour empêcher génération code dangereux offensif bloquent aussi leur analyse et donc la défense.</p>
+<p><strong>La solution trouvée sous pression</strong> : GLM 5.2 un modèle chinois à poids ouverts, auto-hébergé sur l'infra HuggingFace (aucune donnée ne sort du périmètre), analyse complète en quelques heures les logs.</p>
+<blockquote>
+<p><strong>Clem Delangue (CEO HuggingFace) à Fortune</strong> : <em>&quot;When you're in the middle of an active incident, you can't have your tools refusing to examine malicious payloads or getting your account flagged. Open models let us do that work without asking anyone's permission.&quot;</em></p>
+</blockquote>
+<h3>La dimension politique (et le timing)</h3>
+<p>L'incident arrive juste après les restrictions export de l'administration Trump (juin 2026) bloquant Anthropic Fable 5, Mythos 5 et restreignant GPT-5.6 Sol par peur de leurs capacités cyber.</p>
+<p><strong>Résultat</strong> : une entreprise US, attaquée par un modèle US, contrainte d'utiliser un modèle chinois pour se défendre. Parce que les garde-fous US l'en empêchent.</p>
+<p><strong>David Sacks</strong> (ex-AI &amp; crypto czar Trump) : <em>&quot;There's no reason to limit American models on tasks that Chinese models handle without issue. We're only making ourselves less competitive.&quot;</em></p>
+<h3>Le débat &quot;coup de pub&quot;</h3>
+<p>Certains observateurs sont sceptiques. <strong>BBC</strong> + <strong>Daniel Card</strong> (consultant cyber, LinkedIn) : <em>&quot;Comme par hasard, OpenAI a piraté quelqu'un qui peut aussi bénéficier d'une exposition médiatique...&quot;</em></p>
+<h2>Les réponses concrètes : qui a fait quoi</h2>
+<p><strong>HuggingFace</strong> a colmaté les brèches immédiatement, révoqué les identifiants volés, renforcé les serveurs, ajouté des alertes critiques pour un signalement plus rapide et informé les autorités.</p>
+<p><strong>OpenAI</strong> : A augmenté le contrôle de son infra au détriment de la vitesse de recherche, collabore à l'enquête, divulgue les zero-days à JFrog, donne accès au programme &quot;trusted access&quot; pour HuggingFace (modèles US utilisables en défense).</p>
+<p><strong>JFrog</strong> : Diffuse un correctif 10 jours après exploitation (critiqué : fenêtre d'avance pour modèles malveillants). La Version 7.161.15 corrige les 3 CVE.</p>
+<h3>Le trou réglementaire</h3>
+<p>Lois SB 53 de Californie et le RAISE Act de New York donnent obligation de divulguer seulement s'il y a un risque de plus de 50 morts ou plus de 1 Md$ dommages. OpenAI n'avait aucune obligation légale de révéler l'incident.</p>
+<p><strong>Alex Bores</strong> (Représentant État NY) rejette la faute sur le lobbying OpenAI / Bloomberg / a16z qui a oeuvré à affaiblir les textes.</p>
+<h2>Les 5 leçons qui changent la donne</h2>
+<ol>
+<li>
+<p><strong>Les Attaques IA autonomes sont une réalité</strong> : Modèles découvrent/exploitent failles systèmes réels sans code source, à vitesse inhumaine. Les SOC doivent assumer que l'attaquant peut être une IA.</p>
+</li>
+<li>
+<p><strong>Les garde-fous sont une arme à double tranchant</strong> : Protègent usage malveillant mais aveuglent défenseurs. La solution est de disposer d'un modèle capable, auto-hébergé, sans garde-fous bloquants, prêt avant l'incident pour analyse forensique.</p>
+</li>
+<li>
+<p><strong>Les sandboxes ne sont pas une isolation réelle</strong> : L'environnement de test avait connexion réseau, donc n'était pas physiquement isolé. Heidy Khlaaf (ex-OpenAI) : <em>&quot;Ce qui est sûr dans une centrale nucléaire (coupure physique Internet) est très différent de ce que la tech considère comme sûr&quot;</em>.</p>
+</li>
+<li>
+<p><strong>Régulation légale inadaptée</strong> : Les seuils sont trop hauts et donc la transparence des faits n'est pas forcée. Un lobbying affaiblit les textes.</p>
+</li>
+<li>
+<p><strong>La vitesse est arme n°1</strong> : <strong>Clem Delangue</strong> : <em>&quot;Nous pensons avoir arrêté l'attaque avant que les humains qui l'ont lancée n'aient eu le temps de prendre le contrôle. La vitesse sera la clé de la cybersécurité à l'ère des agents IA.&quot;</em> Automatiser la détection et la réponse pour agir en quelques minutes et pas en heures devient l'état de l'art.</p>
+</li>
+</ol>
+<h2>La suite : l'Open Secure AI Alliance (OSAIA)</h2>
+<p>Cet incident a été le déclencheur direct de la création de l'<strong>Open Secure AI Alliance</strong> en juillet 2026. <strong>37 entreprises</strong> (NVIDIA, Microsoft, Cisco, HuggingFace, Linux Foundation, etc.) s'associent pour développer des <strong>outils de cybersécurité ouverts, basés sur l'IA</strong>, que les défenseurs peuvent <strong>héberger, inspecter, adapter sans demander la permission</strong>.</p>
+<h2>Sources</h2>
+<ol>
+<li><strong>Blog officiel HuggingFace</strong> (19/07/2026) — Incident, détection, réponse, leçon garde-fous. https://huggingface.co/blog/security-incident-july-2026</li>
+<li><strong>Communiqué OpenAI</strong> (21/07/2026) — Origine évaluation, détails attaque, 5 actions immédiates, trusted access. https://openai.com/index/hugging-face-model-evaluation-security-incident/</li>
+<li><strong>Fortune</strong> (20/07/2026) — Paradoxe garde-fous, dimension politique, citation Delangue, citation Sacks. https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/</li>
+<li><strong>Timeline technique HuggingFace</strong> (19/07/2026) — Chaîne attaque jour par jour, 2 vecteurs, périmètre exact, 17 600 actions. https://huggingface.co/blog/security-incident-timeline-july-2026</li>
+<li><strong>Time</strong> (24/07/2026) — Régulation SB 53/RAISE Act, lobbying, citation Khlaaf, leçon vitesse. https://time.com/2026/07/24/openai-huggingface-attack-regulation/</li>
+<li><strong>BBC</strong> (23/07/2026) — Scepticisme &quot;coup de pub&quot;, Daniel Card. https://www.bbc.com/news/technology-2026-07-23-openai-huggingface-hack</li>
+<li><strong>JFrog</strong> (28/07/2026) — Confirmation 3 CVE Artifactory, correctifs v7.161.15, délai 10 jours. https://jfrog.com/blog/openai-artifactory-zero-day-july-2026</li>
+<li><strong>TheHackerNews</strong> (22/07/2026) — Évasion sandbox, trusted access OpenAI. https://thehackernews.com/2026/07/openai-models-escaped-sandbox-huggingface.html</li>
+<li><strong>ArsTechnica</strong> (28/07/2026) — Détails techniques zero-day Artifactory. https://arstechnica.com/2026/07/jfrog-artifactory-zero-day-openai/</li>
+<li><strong>NVIDIA / OSAIA</strong> (27/07/2026) — Lancement alliance 37 entreprises, outils défense ouverts. https://www.nvidia.com/en-us/about/open-secure-ai-alliance/</li>
+</ol>
 
 
     
@@ -158,6 +188,33 @@
   <script src="/assets/js/breakpoints.min.js"></script>
   <script src="/assets/js/util.js"></script>
   <script src="/assets/js/main.js"></script>
+
+  <!-- Theme toggle -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const current = html.getAttribute('data-theme');
+      if (current === 'light') {
+        html.removeAttribute('data-theme');
+        btn.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const btn = document.getElementById('themeToggle');
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (btn) btn.textContent = '☀️';
+      }
+    })();
+  </script>
 
 </body>
 </html>
