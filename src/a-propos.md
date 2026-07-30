@@ -6,7 +6,6 @@ description: Charles-Christian Croix alias Karles — parcours professionnel et 
 
 <!-- Contact bar (full width) -->
 <div class="contact-bar">
-  <h4>Contact</h4>
   <ul class="contact-links">
     <li><span class="icon fa-envelope-open"></span> <a href="mailto:debian@karlesnine.com">debian@karlesnine.com</a></li>
     <li><span class="icon brands fa-linkedin"></span> <a href="https://www.linkedin.com/in/charleschristiancroix/" target="_blank" rel="noopener noreferrer">linkedin.com/in/charleschristiancroix</a></li>
@@ -17,8 +16,6 @@ description: Charles-Christian Croix alias Karles — parcours professionnel et 
 <div class="apropos-grid">
 
 <div class="apropos-cv">
-
-<h2 class="major">Parcours</h2>
 
 <p>Débute l'informatique par l'installation de linux Yggdrasil en 1995</p>
 <p>1994 - 2004: Première partie de carrière dans le support client et le helpdesk<br>

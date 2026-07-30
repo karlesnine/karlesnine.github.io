@@ -2115,7 +2115,7 @@ input, select, textarea {
 /* ===== À propos page (fusion CV + Contact + Bio) ===== */
 .contact-bar {
   text-align: center;
-  padding: 1rem 0 2rem;
+  padding: 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
 }
