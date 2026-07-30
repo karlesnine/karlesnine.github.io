@@ -11,8 +11,8 @@ MSG="${1:-deploy}"
 echo "→ Build 11ty..."
 npx @11ty/eleventy
 
-echo "→ Assets: copie du CV PDF..."
-cp Charles-Christian.Croix.curriculum.vitae.pdf . 2>/dev/null || true
+echo "→ Assets: copie du CV PDF vers a-propos/..."
+cp Charles-Christian.Croix.curriculum.vitae.pdf a-propos/ 2>/dev/null || true
 
 echo "→ Git add + commit..."
 git add -A
