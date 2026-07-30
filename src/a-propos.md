@@ -1,10 +1,59 @@
 ---
 layout: page.njk
 title: À propos
-description: Charles-Christian Croix alias Karles — mon parcours
+description: Charles-Christian Croix alias Karles — parcours professionnel et contact
 ---
 
-<span class="image main"><img src="/assets/images/Charles-Christian.Croix_0191.bis.jpg" alt="Charles-Christian Croix en 2015" /></span>
+<!-- Contact bar (full width) -->
+<div class="contact-bar">
+  <h4>Contact</h4>
+  <ul class="contact-links">
+    <li><span class="icon fa-envelope-open"></span> <a href="mailto:debian@karlesnine.com">debian@karlesnine.com</a></li>
+    <li><span class="icon brands fa-linkedin"></span> <a href="https://www.linkedin.com/in/charleschristiancroix/" target="_blank" rel="noopener noreferrer">linkedin.com/in/charleschristiancroix</a></li>
+  </ul>
+</div>
+
+<!-- Two columns: CV | À propos -->
+<div class="apropos-grid">
+
+<div class="apropos-cv">
+
+<h2 class="major">Parcours</h2>
+
+<p>Débute l'informatique par l'installation de linux Yggdrasil en 1995</p>
+<p>1994 - 2004: Première partie de carrière dans le support client et le helpdesk<br>
+2004 - 2018: Seconde partie de carrière dans l'infrastructure IT (Sysadmin, DevOps, SRE)<br>
+2018 - 2026: Troisième partie de carrière dans le management d'équipe d'ingénieur</p>
+
+<p><a href="/Charles-Christian.Croix.curriculum.vitae.pdf">Mon Curriculum vitae complet en PDF</a>.</p>
+
+<h4>Jobs:</h4>
+<ul>
+  <li>Payplug: Senior Engineering Manager Infrastructure</li>
+  <li>Devoteam Innovative Tech: Principal Solution Architect Observability</li>
+  <li>Sightcall: Engineering manager Infrastructure ( SRE / DevOps )</li>
+  <li>Vestiaire Collective: Engineering manager Infrastructure ( SRE / DevOps )</li>
+  <li>Manomano: Lead infrastructure ( SRE / DevOps )</li>
+  <li>Blablacar: Site Reliability Engineer ( SRE )</li>
+  <li>Mondadori France: Responsable Web Hosting</li>
+  <li>Iscool Entertainment: AdminSys Responsable de production</li>
+  <li>Prima Presse: Responsable Web Hosting</li>
+  <li>Institut Français du Pétrole: Ingénieur Système Expert Linux</li>
+  <li>Valérian SA: Administrateur Système et Réseau</li>
+  <li>Lycos Europe: Responsable support Lycos hosting europe</li>
+  <li>Multimania.fr: Responsable support utilisateurs</li>
+  <li>Volkswagen gedas France: Administrateur Hotline</li>
+  <li>DHL International: Technicien Helpdesk</li>
+  <li>Surcouf: Vendeur</li>
+</ul>
+
+<img src="/assets/images/Charles-Christian.Croix_0220.jpg" alt="" class="apropos-photo" />
+
+</div>
+
+<div class="apropos-bio">
+
+<img src="/assets/images/Charles-Christian.Croix_0191.bis.jpg" alt="Charles-Christian Croix en 2015" class="apropos-photo" />
 
 <p>Bonjour, je suis Charles-Christian Croix mais tout le monde m'appelle <strong>Karles</strong></p>
 
@@ -26,3 +75,7 @@ description: Charles-Christian Croix alias Karles — mon parcours
   <li>Administrateur système et réseau expert Linux</li>
   <li>Expert Cloud Computing / AWS</li>
 </ul>
+
+</div>
+
+</div>

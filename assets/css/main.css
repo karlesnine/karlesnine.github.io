@@ -2111,3 +2111,66 @@ input, select, textarea {
 [data-theme="light"] .tab-nav a { color: #1a1a1a; background: #fafaf7; border-color: #d0ccc4; }
 
 [data-theme="light"] .header p { color: #444444; }
+
+/* ===== À propos page (fusion CV + Contact + Bio) ===== */
+.contact-bar {
+  text-align: center;
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.contact-bar h4 {
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  border: none;
+  width: auto;
+}
+.contact-bar .contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.contact-bar .contact-links li {
+  padding: 0;
+  font-size: 0.9rem;
+}
+.contact-bar .contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.contact-bar .contact-links a:hover {
+  text-decoration: underline;
+}
+.contact-bar .contact-links .icon {
+  margin-right: 0.4rem;
+}
+
+.apropos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.apropos-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+[data-theme="light"] .contact-bar h4 { color: #444444; }
+[data-theme="light"] .contact-bar { border-color: #d0ccc4; }
+
+@media (max-width: 768px) {
+  .apropos-grid { grid-template-columns: 1fr; }
+}
