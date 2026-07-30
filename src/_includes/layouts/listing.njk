@@ -12,6 +12,21 @@ layout: base.njk
     <span>{{ collections[collectionName].length }} article{% if collections[collectionName].length > 1 %}s{% endif %}</span>
   </div>
 
+  {% for activity in activities %}
+    {% if activity.collection == collectionName %}
+    <div class="activity-intro">
+      <p class="activity-subtitle">{{ activity.subtitle }}</p>
+      <p class="activity-audience"><strong>Pour qui :</strong> {{ activity.audience }}</p>
+      <h4>Ce que je propose</h4>
+      <ul>
+        {% for item in activity.offerings %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endfor %}
+
   <div class="articles-list">
     {% for article in collections[collectionName] | reverse %}
     <a href="{{ article.url }}" class="article-row">

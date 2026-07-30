@@ -5,7 +5,15 @@
     "name": "Vulgarisation IA",
     "icon": "fa-robot",
     "description": "Vulgarisation IA pour experts métier, approche pragmatique et terrain.",
-    "topics": ["ia-llm", "prompting", "limites"]
+    "topics": ["ia-llm", "prompting", "limites"],
+    "subtitle": "L'IA expliquée à ceux qui n'en font pas",
+    "audience": "Dirigeants, chefs de projet, RH, juristes, curieux",
+    "offerings": [
+      "Démystifier les LLMs et l'IA générative",
+      "Comprendre les cas d'usage métier concrets",
+      "Identifier les limites et les risques",
+      "Rédiger des prompts efficaces"
+    ]
   },
   {
     "slug": "formation-cybersecurite",
@@ -13,7 +21,15 @@
     "name": "Cyber accessible",
     "icon": "fa-shield",
     "description": "Culture de la sécurité sans jargon ni technique appliqué.",
-    "topics": ["fondamentaux", "pédagogie", "analogie"]
+    "topics": ["fondamentaux", "pédagogie", "analogie"],
+    "subtitle": "La cybersécurité sans jargon pour les équipes terrain",
+    "audience": "Managers non-tech, néo-entrepreneurs, étudiants",
+    "offerings": [
+      "Les fondamentaux en langage clair",
+      "Les bonnes pratiques au quotidien",
+      "Réagir face à un incident",
+      "Comprendre les obligations réglementaires"
+    ]
   },
   {
     "slug": "formation-facteurs-humains",
@@ -21,6 +37,14 @@
     "name": "Facteur humain crise IT",
     "icon": "fa-people-group",
     "description": "Gérer une équipe prod comme un cockpit pour éviter le crash.",
-    "topics": ["biais", "suraccident", "résilience"]
+    "topics": ["biais", "suraccident", "résilience"],
+    "subtitle": "Gérer son équipe comme un cockpit pour éviter le crash",
+    "audience": "Chefs de projet, managers d'astreinte, direction IT",
+    "offerings": [
+      "Comprendre les biais en situation de crise",
+      "Outils de décision sous pression",
+      "Éviter le suraccident",
+      "Renforcer la résilience d'équipe"
+    ]
   }
 ]

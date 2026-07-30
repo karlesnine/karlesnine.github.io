@@ -2176,3 +2176,42 @@ input, select, textarea {
 @media (max-width: 768px) {
   .apropos-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Activity intro (listing pages) ===== */
+.activity-intro {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.activity-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+.activity-audience {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.activity-intro h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  border: none;
+  width: auto;
+}
+.activity-intro ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+.activity-intro li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.2rem 0;
+}
