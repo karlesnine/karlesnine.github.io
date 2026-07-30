@@ -18,7 +18,7 @@
   {
     "slug": "formation-cybersecurite",
     "collection": "formationCybersecurite",
-    "name": "Cyber accessible",
+    "name": "cybersécurité accessible",
     "icon": "fa-shield",
     "description": "Culture de la sécurité sans jargon ni technique appliqué.",
     "topics": ["fondamentaux", "pédagogie", "analogie"],
