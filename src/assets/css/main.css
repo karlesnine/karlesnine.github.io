@@ -1825,6 +1825,7 @@ input, select, textarea {
 
 /* Page content (articles, static pages) */
 .page-content { padding: 2rem 0; }
+.page-content h2, .page-content h2.major { margin: 0; }
 .page-content .article-meta { font-size: 0.8rem; color: #ffffff; margin-bottom: 1.5rem; }
 .article-activity { color: var(--accent); }
 .article-tags { margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
@@ -2117,7 +2118,7 @@ input, select, textarea {
   text-align: center;
   padding: 0;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .contact-bar h4 {
   font-size: 0.9rem;
@@ -2131,6 +2132,7 @@ input, select, textarea {
 .contact-bar .contact-links {
   list-style: none;
   padding: 0;
+  padding-bottom: 1rem;
   margin: 0;
   display: flex;
   justify-content: center;
