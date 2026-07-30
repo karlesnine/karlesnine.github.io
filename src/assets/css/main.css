@@ -2095,3 +2095,19 @@ input, select, textarea {
 [data-theme="light"] input[type="radio"]:focus + label:before { border-color: #2b6c9e !important; box-shadow: 0 0 0 1px #2b6c9e !important; background: rgba(0,0,0,0.03) !important; }
 
 [data-theme="light"] mark { color: #1a1a1a; }
+
+/* ===== Light theme: overrides for A1 custom CSS ===== */
+[data-theme="light"] .wrapper,
+[data-theme="light"] .page-content,
+[data-theme="light"] .dash-card,
+[data-theme="light"] .article-row { color: #1a1a1a !important; }
+
+[data-theme="light"] .page-content .article-meta { color: #444444 !important; }
+
+[data-theme="light"] .article-row .ar-body p { color: #444444 !important; }
+
+[data-theme="light"] .article-row .ar-meta { color: #666666 !important; }
+
+[data-theme="light"] .tab-nav a { color: #1a1a1a; background: #fafaf7; border-color: #d0ccc4; }
+
+[data-theme="light"] .header p { color: #444444; }
