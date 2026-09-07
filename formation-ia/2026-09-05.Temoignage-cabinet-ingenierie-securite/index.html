@@ -33,7 +33,12 @@
     #consent-banner button{border:0;border-radius:4px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:600}
     #consent-accept{background:#16a34a;color:#fff}
     #consent-refuse{background:transparent;color:#f8fafc;border:1px solid #94a3b8}
-    @media (max-width:640px){ #consent-banner{flex-direction:column;align-items:flex-start} #consent-banner .consent-actions{width:100%} #consent-banner button{flex:1} }
+    #consent-banner a{color:#7dd3fc;text-decoration:underline}
+    #consent-banner a:hover{color:#e0f2fe}
+    .footer p{position:relative}
+    #consent-reset{position:absolute;right:0;top:50%;transform:translateY(-50%);text-decoration:underline;color:var(--text-secondary)}
+    #consent-reset:hover{color:var(--accent)}
+    @media (max-width:640px){ #consent-banner{flex-direction:column;align-items:flex-start} #consent-banner .consent-actions{width:100%} #consent-banner button{flex:1} #consent-reset{position:static;transform:none;display:block;margin-top:.5rem} }
   </style>
 
   <!-- Styles -->
@@ -111,7 +116,9 @@ Septembre 2026</p>
   </nav>
 
   <footer class="footer">
-  <p>&copy; Design: <a href="https://html5up.net">HTML5 UP</a> — Adaptation: Karlesnine — Propulsé par <a href="https://www.11ty.dev/">11ty</a></p>
+  <p>&copy; Design: <a href="https://html5up.net">HTML5 UP</a> — Adaptation: Karlesnine — Propulsé par <a href="https://www.11ty.dev/">11ty</a>
+    <a href="#" id="consent-reset" onclick="k9DeleteCookies(); return false;">Supprimer les cookies</a>
+  </p>
 </footer>
 
 
@@ -162,7 +169,7 @@ Septembre 2026</p>
 
   <!-- Bannière de consentement cookies (RGPD / CNIL) -->
   <div id="consent-banner" role="dialog" aria-live="polite" aria-label="Consentement des cookies">
-    <p>Ce site utilise Google Analytics pour mesurer son audience. Les cookies de mesure ne sont déposés qu'avec votre accord. Vous pouvez accepter ou refuser : le site reste utilisable dans les deux cas.</p>
+    <p>Ce site utilise Google Analytics pour mesurer son audience. Les cookies de mesure ne sont déposés qu'avec votre accord. Vous pouvez accepter ou refuser : le site reste utilisable dans les deux cas. <a href="/mentions-legales-et-confidentialite/">En savoir plus</a></p>
     <div class="consent-actions">
       <button id="consent-accept" type="button">Accepter</button>
       <button id="consent-refuse" type="button">Refuser</button>
@@ -188,7 +195,7 @@ Septembre 2026</p>
 
     function hideBanner() {
       var banner = document.getElementById('consent-banner');
-      if (banner) { banner.parentNode.removeChild(banner); }
+      if (banner) { banner.style.display = 'none'; }
     }
 
     function readChoice() {
@@ -209,11 +216,36 @@ Septembre 2026</p>
     }
 
     function showBanner() {
-      var accept = document.getElementById('consent-accept');
-      var refuse = document.getElementById('consent-refuse');
-      if (accept) { accept.addEventListener('click', function() { apply('accepted'); }); }
-      if (refuse) { refuse.addEventListener('click', function() { apply('refused'); }); }
+      var banner = document.getElementById('consent-banner');
+      if (banner) { banner.style.display = 'flex'; }
+      if (banner && !banner.getAttribute('data-bound')) {
+        banner.setAttribute('data-bound', '1');
+        var accept = document.getElementById('consent-accept');
+        var refuse = document.getElementById('consent-refuse');
+        if (accept) { accept.addEventListener('click', function() { apply('accepted'); }); }
+        if (refuse) { refuse.addEventListener('click', function() { apply('refused'); }); }
+      }
     }
+
+    function removeConsentCookies() {
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      var toDelete = ['_ga', '_gid'];
+      try {
+        var parts = document.cookie.split(';');
+        for (var i = 0; i < parts.length; i++) {
+          var name = parts[i].split('=')[0].trim();
+          if (name && name.indexOf('_ga') === 0 && toDelete.indexOf(name) === -1) { toDelete.push(name); }
+        }
+      } catch (e) {}
+      for (var j = 0; j < toDelete.length; j++) {
+        document.cookie = toDelete[j] + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
+      }
+    }
+
+    window.k9DeleteCookies = function() {
+      removeConsentCookies();
+      showBanner();
+    };
 
     var stored = readChoice();
 
