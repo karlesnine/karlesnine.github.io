@@ -7,6 +7,8 @@ activity: "formation-facteurs-humains"
 layout: article.njk
 ---
 
+# Comprendre les biais cognitifs dans les décisions techniques
+
 Fusce tortor ligula, molestie tincidunt pretium nec, euismod ut ligula. Donec molestie metus nisi, sit amet fringilla libero tincidunt tristique. Suspendisse posuere, justo vel placerat placerat, nulla nunc convallis quam, suscipit rhoncus velit urna id metus. Donec accumsan orci odio, ut feugiat arcu molestie eu. Duis eu mauris elit. Duis at lobortis felis. In eu accumsan velit, non luctus eros. Aliquam erat volutpat. In pharetra porta ante, non venenatis risus posuere sed. Proin pretium massa et lacus feugiat, a molestie eros imperdiet. Ut at ante ac risus scelerisque ultricies a ut dolor.
 
 Nulla facilisi. Praesent sed erat volutpat, rutrum arcu eu, lacinia justo. Aliquam sit amet neque a augue porttitor pharetra. Fusce non gravida nunc. Proin accumsan ex ullamcorper ante pretium tincidunt. Proin dignissim tincidunt nunc. Proin elit sapien, consectetur in sodales at, tincidunt a libero. In a nunc leo. Sed non pulvinar mi. Curabitur sit amet pretium purus. Etiam tempor arcu a lectus commodo, tempus tempor orci tristique. Nam eu tellus elit. Fusce dictum purus nunc, in hendrerit dolor mollis accumsan.
