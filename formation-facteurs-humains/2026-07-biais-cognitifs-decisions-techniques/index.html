@@ -25,14 +25,16 @@
   <meta name="twitter:description" content="Comment les facteurs humains influencent les choix d&#39;architecture et de conception technique." />
   <meta name="twitter:image" content="https://www.karlesnine.com/assets/images/social-card.png" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEYZPP00HG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZEYZPP00HG');
-  </script>
+  <!-- Bannière de consentement (style) -->
+  <style>
+    #consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#0f172a;color:#f8fafc;padding:14px 18px;font-size:14px;line-height:1.45;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -2px 8px rgba(0,0,0,.25)}
+    #consent-banner p{margin:0;max-width:70ch}
+    #consent-banner .consent-actions{display:flex;gap:8px;flex-shrink:0}
+    #consent-banner button{border:0;border-radius:4px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:600}
+    #consent-accept{background:#16a34a;color:#fff}
+    #consent-refuse{background:transparent;color:#f8fafc;border:1px solid #94a3b8}
+    @media (max-width:640px){ #consent-banner{flex-direction:column;align-items:flex-start} #consent-banner .consent-actions{width:100%} #consent-banner button{flex:1} }
+  </style>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css" />
@@ -153,6 +155,56 @@
         if (bg) bg.style.display = 'none';
       }
     })();
+  </script>
+
+  <!-- Bannière de consentement cookies (RGPD / CNIL) -->
+  <div id="consent-banner" role="dialog" aria-live="polite" aria-label="Consentement des cookies">
+    <p>Ce site utilise Google Analytics pour mesurer son audience. Les cookies de mesure ne sont déposés qu'avec votre accord. Vous pouvez accepter ou refuser : le site reste utilisable dans les deux cas.</p>
+    <div class="consent-actions">
+      <button id="consent-accept" type="button">Accepter</button>
+      <button id="consent-refuse" type="button">Refuser</button>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var GA_ID = 'G-ZEYZPP00HG';
+    var KEY = 'k9_consent';
+
+    function loadGA() {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+
+    function apply(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      var banner = document.getElementById('consent-banner');
+      if (banner) { banner.parentNode.removeChild(banner); }
+      if (choice === 'accepted') { loadGA(); }
+    }
+
+    function showBanner() {
+      var accept = document.getElementById('consent-accept');
+      var refuse = document.getElementById('consent-refuse');
+      if (accept) { accept.addEventListener('click', function() { apply('accepted'); }); }
+      if (refuse) { refuse.addEventListener('click', function() { apply('refused'); }); }
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    if (stored === 'accepted') {
+      loadGA();
+    } else if (stored !== 'refused') {
+      showBanner();
+    }
+  })();
   </script>
 
 </body>
