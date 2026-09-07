@@ -48,8 +48,8 @@ www.karlesnine.com/
 ## Workflow
 
 1. Créer un article : `src/formation-*/AAAA-MM-titre.md` avec frontmatter (title, description, date, tags, activity, layout)
-2. Build + déploiement : `npm run deploy` (→ build 11ty + copie vers racine)
-3. Commiter + pusher : `git add -A && git commit -m "msg" && git push`
+2. Publier (build + commit + push) : `./publish.zsh` depuis la racine du dépôt. Message de commit par défaut : « Mise à jour site — <date> ». Message personnalisé : `./publish.zsh <message>`.
+3. Pour ne builder qu'en local (vérification, sans publier) : `npm run build` (si `npm` est introuvable, préfixer par `export PATH=$HOME/.hermes/node/bin:$PATH`).
 
 Les listings se mettent à jour **automatiquement** au build (collections 11ty par tag).
 
@@ -72,5 +72,5 @@ Les listings se mettent à jour **automatiquement** au build (collections 11ty p
 ## Notes
 
 - Contenu Lorem Ipsum dans les 3 articles exemples (à remplacer par du vrai contenu)
-- `npm run build` → génère `_site/`
-- `npm run deploy` → build + copie vers racine
+- `npm run build` → régénère les pages HTML (sources `src/` vers HTML à la racine du dépôt)
+- `./publish.zsh` → build + commit + push GitHub Pages (script officiel depuis le 06/09/2026 ; `npm run deploy` obsolète)

@@ -185,10 +185,14 @@ Septembre 2026</p>
       gtag('config', GA_ID);
     }
 
-    function apply(choice) {
-      try { localStorage.setItem(KEY, choice); } catch (e) {}
+    function hideBanner() {
       var banner = document.getElementById('consent-banner');
       if (banner) { banner.parentNode.removeChild(banner); }
+    }
+
+    function apply(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      hideBanner();
       if (choice === 'accepted') { loadGA(); }
     }
 
@@ -203,8 +207,11 @@ Septembre 2026</p>
     try { stored = localStorage.getItem(KEY); } catch (e) {}
 
     if (stored === 'accepted') {
+      hideBanner();
       loadGA();
-    } else if (stored !== 'refused') {
+    } else if (stored === 'refused') {
+      hideBanner();
+    } else {
       showBanner();
     }
   })();
