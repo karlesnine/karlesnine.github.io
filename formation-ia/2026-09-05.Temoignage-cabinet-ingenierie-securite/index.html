@@ -173,6 +173,7 @@ Septembre 2026</p>
   (function() {
     var GA_ID = 'G-ZEYZPP00HG';
     var KEY = 'k9_consent';
+    var MAX_AGE_MS = 395 * 24 * 60 * 60 * 1000; // 13 mois
 
     function loadGA() {
       window.dataLayer = window.dataLayer || [];
@@ -190,8 +191,19 @@ Septembre 2026</p>
       if (banner) { banner.parentNode.removeChild(banner); }
     }
 
+    function readChoice() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) { return null; }
+        var data = JSON.parse(raw);
+        if (!data || (data.c !== 'accepted' && data.c !== 'refused')) { return null; }
+        if (Date.now() - data.t > MAX_AGE_MS) { return null; }
+        return data.c;
+      } catch (e) { return null; }
+    }
+
     function apply(choice) {
-      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      try { localStorage.setItem(KEY, JSON.stringify({ c: choice, t: Date.now() })); } catch (e) {}
       hideBanner();
       if (choice === 'accepted') { loadGA(); }
     }
@@ -203,8 +215,7 @@ Septembre 2026</p>
       if (refuse) { refuse.addEventListener('click', function() { apply('refused'); }); }
     }
 
-    var stored = null;
-    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    var stored = readChoice();
 
     if (stored === 'accepted') {
       hideBanner();
