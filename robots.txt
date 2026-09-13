@@ -1,0 +1,8 @@
+# Signaux de contenu (reservation de droits, directive 2019/790 article 4)
+# search   : indexation et resultats de recherche autorises
+# ai-input : reprise du contenu dans un modele generatif, non accordee
+# ai-train : entrainement et affinage de modeles, INTERDIT
+
+User-Agent: *
+Content-signal: search=yes, ai-train=no, use=reference
+Allow: /
