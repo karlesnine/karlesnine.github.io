@@ -2187,6 +2187,22 @@ h1.major { font-size: 1.5rem; line-height: 1.4; }
 /* Interlignage de la page A propos. Le theme applique 2rem sous chaque
    paragraphe : trop pour deux colonnes de paragraphes courts, ou cela
    creuse un vide entre chaque bloc et ecrase les sous-titres. */
+/* Appel a l'action : fin d'article, fin de page de section, accueil.
+   Le bloc est pilote par "cta" dans src/_data/site.json. */
+.cta-block {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1.5rem 1.75rem;
+  margin: 2.5rem 0 0 0;
+  text-align: center;
+}
+.cta-block .cta-phrase { margin: 0 0 0.9rem 0; color: var(--text); }
+.cta-block .cta-liens { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+.cta-block .cta-liens a { color: var(--accent); text-decoration: none; }
+.cta-block .cta-liens a:hover { text-decoration: underline; }
+.cta-block .cta-sep { margin: 0 0.6rem; }
+
 .apropos-grid p { margin: 0 0 1rem 0; }
 .apropos-grid h4 { margin: 1.6rem 0 0.6rem 0; }
 .apropos-grid h4:first-child { margin-top: 0; }
