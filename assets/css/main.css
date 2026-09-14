@@ -1828,6 +1828,14 @@ input, select, textarea {
 /* Page content (articles, static pages) */
 .page-content { padding: 2rem 0; }
 .page-content h2, .page-content h2.major { margin: 0; }
+
+/* Pages statiques (mentions legales et confidentialite, a propos).
+   Le theme annule les marges des titres ici et laisse 2rem sous chaque
+   paragraphe : les titres collent au texte, et des paragraphes courts
+   paraissent separes par un saut de ligne double. */
+.page-static p { margin: 0 0 1rem 0; }
+.page-static h2 { margin: 1.25rem 0 0.75rem 0; }
+.page-static h2.major { margin: 0 0 2rem 0; }
 .page-content .article-meta { font-size: 0.8rem; color: #ffffff; margin-bottom: 1.5rem; }
 .article-activity { color: var(--accent); }
 .article-tags { margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
