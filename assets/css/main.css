@@ -2172,6 +2172,13 @@ input, select, textarea {
   margin: 1.5rem auto;
 }
 
+/* Interlignage de la page A propos. Le theme applique 2rem sous chaque
+   paragraphe : trop pour deux colonnes de paragraphes courts, ou cela
+   creuse un vide entre chaque bloc et ecrase les sous-titres. */
+.apropos-grid p { margin: 0 0 1rem 0; }
+.apropos-grid h4 { margin: 1.6rem 0 0.6rem 0; }
+.apropos-grid h4:first-child { margin-top: 0; }
+
 [data-theme="light"] .contact-bar h4 { color: #444444; }
 [data-theme="light"] .contact-bar { border-color: #d0ccc4; }
 
