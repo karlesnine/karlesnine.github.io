@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Karlesnine</title>
+    <link>https://www.karlesnine.com/</link>
+    <description>Articles et retours d'expérience sur l'intelligence artificielle, la cybersécurité et le facteur humain en crise informatique.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.karlesnine.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mon client est un opérateur d&#39;importance vitale, et il m&#39;a dit que ça ne changeait rien pour moi</title>
+      <link>https://www.karlesnine.com/formation-cybersecurite/2026-09-28.operateur-importance-vitale-fournisseurs/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-cybersecurite/2026-09-28.operateur-importance-vitale-fournisseurs/</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <category>formation-cybersecurite</category>
+      <description>Un prestataire découvre que son client est un opérateur d&#39;importance vitale. Ce que la loi impose à l&#39;opérateur, et ce que cela change pour ses fournisseurs.</description>
+    </item>
+    <item>
+      <title>Un hôpital condamné à 500 000 euros après la fuite de 727 000 dossiers : ce que ça dit aux PME</title>
+      <link>https://www.karlesnine.com/formation-cybersecurite/2026-09-07.CNIL-hopital-prive-loire-amende-500000/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-cybersecurite/2026-09-07.CNIL-hopital-prive-loire-amende-500000/</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <category>formation-cybersecurite</category>
+      <description>La CNIL a infligé 500 000 euros d&#39;amende à l&#39;Hôpital privé de la Loire après la fuite de données de plus de 727 000 personnes. Un cas d&#39;école pour les PME : l&#39;attaque n&#39;avait rien d&#39;exceptionnel, et la leçon tient en trois réglages de base.</description>
+    </item>
+    <item>
+      <title>Ce que l&#39;IA a changé dans un cabinet d&#39;ingénierie en sécurité et en sûreté</title>
+      <link>https://www.karlesnine.com/formation-ia/2026-09-05.Temoignage-cabinet-ingenierie-securite/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-ia/2026-09-05.Temoignage-cabinet-ingenierie-securite/</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+      <category>formation-ia</category>
+      <description>Témoignage de Frédéric Meyer, dirigeant d&#39;un cabinet d&#39;ingénierie en sécurité et en sûreté : comment l&#39;accompagnement IA a allégé le travail documentaire de ses experts.</description>
+    </item>
+    <item>
+      <title>ChatGPT dans un cabinet de mandataire en sécurité ?</title>
+      <link>https://www.karlesnine.com/formation-ia/2026-07-30.ChatGPT.Mandataire.Securite/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-ia/2026-07-30.ChatGPT.Mandataire.Securite/</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>formation-ia</category>
+      <description>Ce guide s&#39;adresse aux cabinets d&#39;ingénierie spécialisés dans les missions de mandataire en sécurité, de responsable unique de sécurité (RUS) et de chargé de sécurité, qui utilisent ou envisagent d&#39;utiliser ChatGPT Business pour rédiger leurs comptes rendus de commission de sécurité, leurs notices de sécurité, leurs rapports de diagnostic, leurs documents de vérification réglementaire, et toute la gestion documentaire qui va avec.</description>
+    </item>
+    <item>
+      <title>Comprendre les biais cognitifs dans les décisions techniques</title>
+      <link>https://www.karlesnine.com/formation-facteurs-humains/2026-07-biais-cognitifs-decisions-techniques/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-facteurs-humains/2026-07-biais-cognitifs-decisions-techniques/</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>formation-facteurs-humains</category>
+      <description>Comment les facteurs humains influencent les choix d&#39;architecture et de conception technique.</description>
+    </item>
+    <item>
+      <title>Les fondamentaux de la cybersécurité pour les équipes IT</title>
+      <link>https://www.karlesnine.com/formation-cybersecurite/2026-07-fondamentaux-cybersecurite-equipes-it/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-cybersecurite/2026-07-fondamentaux-cybersecurite-equipes-it/</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>formation-cybersecurite</category>
+      <description>Guide des bonnes pratiques essentielles pour sécuriser votre infrastructure et sensibiliser vos équipes.</description>
+    </item>
+    <item>
+      <title>Un agent IA s&#39;échappe et lance une attaque</title>
+      <link>https://www.karlesnine.com/formation-ia/2026-07-23.Agent-IA-e%CC%81vade%CC%81-lance-une-attaque/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-ia/2026-07-23.Agent-IA-e%CC%81vade%CC%81-lance-une-attaque/</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+      <category>formation-ia</category>
+      <description>Une IA a piraté HuggingFace toute seule. La défense a dû appeler une IA chinoise pour s&#39;en sortir</description>
+    </item>
+  </channel>
+</rss>
