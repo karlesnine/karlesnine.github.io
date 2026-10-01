@@ -5,8 +5,16 @@
     <link>https://www.karlesnine.com/</link>
     <description>Articles et retours d'expérience sur l'intelligence artificielle, la cybersécurité et le facteur humain en crise informatique.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.karlesnine.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Je ne laisse pas une IA choisir mes sources. Voilà ce qu&#39;elle fait à la place.</title>
+      <link>https://www.karlesnine.com/formation-ia/2026-10-01.ma-base-de-connaissance-a-la-main/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-ia/2026-10-01.ma-base-de-connaissance-a-la-main/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>formation-ia</category>
+      <description>Cinq mois de travail, cinq bases de connaissance, 1 451 sources. La seule décision que je n&#39;ai pas déléguée à une intelligence artificielle est celle de savoir ce qui entre.</description>
+    </item>
     <item>
       <title>Mon client est un opérateur d&#39;importance vitale, et il m&#39;a dit que ça ne changeait rien pour moi</title>
       <link>https://www.karlesnine.com/formation-cybersecurite/2026-09-28.operateur-importance-vitale-fournisseurs/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
