@@ -1863,7 +1863,11 @@ h1.major { font-size: 1.5rem; line-height: 1.4; }
 .articles-list { display: flex; flex-direction: column; gap: 0.75rem; }
 .article-row { display: flex; gap: 1.25rem; padding: 1rem 1.25rem; border: 1px solid var(--border-light); border-radius: 4px; transition: all 0.2s; background: var(--card-bg); text-decoration: none; }
 .article-row:hover { border-color: var(--accent); background: var(--card-bg-hover); }
-.article-row .ar-meta { min-width: 85px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; line-height: 1.4; }
+/* Colonne de gauche a largeur FIXE : elle prenait la largeur de son contenu (mois + etiquette
+   d'activite), ce qui decalait le bord gauche du titre et du texte d'un cartouche a l'autre
+   (55 px d'ecart constates le 02/10/2026). 8.5rem suit la taille de police racine, qui change
+   selon la largeur d'ecran. */
+.article-row .ar-meta { flex: 0 0 8.5rem; min-width: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; line-height: 1.4; }
 .article-row .ar-body { flex: 1; }
 .article-row .ar-body h3 { font-weight: 400; font-size: 0.9rem; margin-bottom: 0.25rem; color: var(--text); }
 .article-row .ar-body p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; }
@@ -1877,7 +1881,7 @@ h1.major { font-size: 1.5rem; line-height: 1.4; }
   .wrapper { padding: 1rem; }
   .header h1, .header .brand { font-size: 1.4rem; }
   .article-row { flex-direction: column; gap: 0.4rem; }
-  .article-row .ar-meta { min-width: auto; }
+  .article-row .ar-meta { flex: 0 0 auto; min-width: auto; }
 }
 
 .theme-toggle { background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.4rem 0.6rem; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; line-height: 1; color: var(--text); }
