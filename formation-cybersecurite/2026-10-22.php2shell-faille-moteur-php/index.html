@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  
+  <title>Quand l&#39;IA rouvre une faille que PHP connaissait depuis 22 ans — Karlesnine</title>
+  <meta name="description" content="Deux failles dans le moteur PHP, trouvées en août par des modèles, corrigées le 21 octobre, et un embargo cassé en une matinée." />
+  
+
+  
+  <meta name="robots" content="index, follow" />
+  
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Quand l&#39;IA rouvre une faille que PHP connaissait depuis 22 ans — Karlesnine" />
+  <meta property="og:description" content="Deux failles dans le moteur PHP, trouvées en août par des modèles, corrigées le 21 octobre, et un embargo cassé en une matinée." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.karlesnine.com/formation-cybersecurite/2026-10-22.php2shell-faille-moteur-php/" />
+  <link rel="canonical" href="https://www.karlesnine.com/formation-cybersecurite/2026-10-22.php2shell-faille-moteur-php/" />
+  <link rel="alternate" type="application/rss+xml" title="Karlesnine, les articles" href="https://www.karlesnine.com/feed.xml" />
+  <meta property="og:image" content="https://www.karlesnine.com/assets/images/carte-formation-cybersecurite.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quand l&#39;IA rouvre une faille que PHP connaissait depuis 22 ans — Karlesnine" />
+  <meta name="twitter:description" content="Deux failles dans le moteur PHP, trouvées en août par des modèles, corrigées le 21 octobre, et un embargo cassé en une matinée." />
+  <meta name="twitter:image" content="https://www.karlesnine.com/assets/images/carte-formation-cybersecurite.png" />
+
+  <!-- Reperes pour les moteurs : donnees structurees -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Quand l'IA rouvre une faille que PHP connaissait depuis 22 ans",
+    "description": "Deux failles dans le moteur PHP, trouvées en août par des modèles, corrigées le 21 octobre, et un embargo cassé en une matinée.",
+    "datePublished": "2026-10-22",
+    "inLanguage": "fr-FR",
+    "url": "https://www.karlesnine.com/formation-cybersecurite/2026-10-22.php2shell-faille-moteur-php/",
+    "author": {
+      "@type": "Person",
+      "name": "Charles-Christian Croix",
+      "alternateName": "Karles",
+      "url": "https://www.karlesnine.com/a-propos/"
+    }
+  }
+  </script>
+  
+
+  <!-- Bannière de consentement (style) -->
+  <style>
+    #consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#0f172a;color:#f8fafc;padding:14px 18px;font-size:14px;line-height:1.45;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -2px 8px rgba(0,0,0,.25)}
+    #consent-banner p{margin:0;max-width:70ch}
+    #consent-banner .consent-actions{display:flex;gap:8px;flex-shrink:0}
+    #consent-banner button{border:0;border-radius:4px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:600}
+    #consent-accept{background:#16a34a;color:#fff}
+    #consent-refuse{background:transparent;color:#f8fafc;border:1px solid #94a3b8}
+    #consent-banner a{color:#7dd3fc;text-decoration:underline}
+    #consent-banner a:hover{color:#e0f2fe}
+    .footer p{position:relative}
+    #consent-reset{position:absolute;right:0;top:50%;transform:translateY(-50%);text-decoration:underline;color:var(--text-secondary)}
+    #consent-reset:hover{color:var(--accent)}
+    @media (max-width:640px){ #consent-banner{flex-direction:column;align-items:flex-start} #consent-banner .consent-actions{width:100%} #consent-banner button{flex:1} #consent-reset{position:static;transform:none;display:block;margin-top:.5rem} }
+  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body class="is-preload">
+
+  
+<div class="wrapper">
+
+  <header class="header">
+  <div class="icon-circle fas fa-address-card"></div>
+  <div class="brand"><a href="/" style="text-decoration:none;color:inherit;">Karlesnine <span>&#128172</span></a></div>
+  <p>Devenez un incompétent conscient : comprendre l'intelligence artificielle, la cybersécurité et la crise informatique.</p>
+</header>
+
+
+  <!-- Mini nav for article pages -->
+  <nav class="tab-nav">
+    <a href="/">Accueil</a>
+    <a href="/tous-les-articles/">Tous les articles</a>
+    <a href="/a-propos/">CV · À propos · Contact</a>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Changer le thème">🌙</button>
+  </nav>
+
+  <article class="page-content">
+    <p class="article-meta">
+      <span class="article-date">Octobre 2026</span>
+      
+      · <a href="/formation-cybersecurite/" class="article-activity">formation-cybersecurite</a>
+      
+    </p>
+
+    <p>En août 2026, 2 équipes assistées par des modèles de langage ont montré qu'un défaut du moteur PHP, documenté depuis 2004, permettait bien d'exécuter du code. Le correctif est sorti le 21 octobre 2026. L'embargo qui le protégeait, lui, n'a pas tenu la matinée.</p>
+<h2>Une faille dans le moteur, pas dans votre site</h2>
+<p>C'est le point qu'on rate en lisant les gros titres. Les 2 failles ne sont pas dans une application écrite en PHP. Elles sont dans le moteur lui-même, dans la gestion de la mémoire et des erreurs, donc dans la partie que traverse presque chaque requête. La qualité du code de votre prestataire n'y change rien.</p>
+<p>La première, CVE-2026-109618, donne une exécution de code par corruption lors d'une saturation mémoire. PHP applique son plafond <code>memory_limit</code> en abandonnant la requête par un saut arrière (<code>longjmp</code>). À cet instant, certaines structures internes ne sont pas encore initialisées. Le nettoyage de fin de requête les croit valides et libère ou lit de la mémoire qui ne lui appartient pas. L'attaquant y a placé ses données. Plusieurs chemins permettent d'atteindre la saturation sans dépasser les limites apparentes, une requête <code>multipart</code> sans longueur déclarée, un nombre illimité d'en-têtes de partie, des champs imbriqués. Calif précise le contournement. PHP compare <code>post_max_size</code> à la longueur annoncée, et non aux octets réellement consommés.</p>
+<p>La seconde, CVE-2026-109619, donne une exécution de code par état global périmé. Une erreur fatale interrompt le code avant son nettoyage, par exemple un échec d'analyse, un <code>require</code> impossible, un délai d'exécution dépassé ou une saturation mémoire. Un pointeur interne continue alors de désigner la mémoire de la requête précédente, déjà libérée. La requête suivante servie par le même processus utilise cet état périmé. C'est un usage après libération, et il faut un producteur puis un consommateur, dans 2 requêtes successives du même processus.</p>
+<p>Toutes les versions depuis PHP 5.4 sont concernées. Les versions corrigées sont 8.2.35, 8.3.36, 8.4.27 et 8.5.12. PHP 7.4, 8.0 et 8.1 ne reçoivent que des rustines de code source, sans binaire officiel.</p>
+<p>La configuration compte autant que la version. Apache avec <code>mod_php</code> est la plus risquée, parce que l'attaque aboutit avant que le code de l'application ne commence à tourner. PHP-FPM est jugé vulnérable par analyse du code, mais l'avis officiel dit qu'aucune attaque complète n'a été démontrée sur cette interface. Calif affirme l'inverse. La divergence est réelle, elle est publique, et elle reste ouverte.</p>
+<p>Sur la gravité, les notes divergent. PHP annonce 9,2 en CVSS v4, le NVD annonce 9,8 en v3, Amazon Linux classe en 8,1 avec la mention importante. La note de 10 qui a circulé le 20 octobre 2026 venait de la fuite, en même temps qu'une date de sortie fausse. Ce n'était pas la note de PHP, et le 10 n'a jamais été confirmé.</p>
+<h2>La découverte, et pourquoi elle a débloqué un dossier bloqué</h2>
+<p>Il y a eu 2 découvertes indépendantes, toutes les 2 assistées par des modèles.</p>
+<p>La première est celle de Calif, chercheur Ryan Austin, dans le cadre du programme Patch the Planet d'OpenAI. Une passe automatisée le 30 juillet 2026, une découverte le 1er août 2026, puis 2 variantes supplémentaires. Le rapport part à PHP le 11 août 2026, la preuve de concept le 14, la confirmation par PHP le 15, et un second défaut est signalé le 21 août 2026. Le modèle employé est GPT-5.6 Sol.</p>
+<p>La seconde est celle de Wiz, le 19 août 2026, avec une exécution de code confirmée sur Drupal et WordPress, et un rapport à PHP le 24 août 2026. Les modèles employés sont Gemini 4 Argon et GPT-5.6 Sol, avec un outil maison nommé Atlas.</p>
+<p>Voilà pour l'actualité. Le passé est plus intéressant.</p>
+<p>En 2004, Stefan Esser décrit déjà une exécution de code déclenchée par la limite de mémoire. Le 28 novembre 2019, le rapport de bogue 78876 (CVE-2019-11048) montre des champs <code>multipart</code> surdimensionnés qui provoquent une saturation mémoire et sautent le nettoyage. Le cas est corrigé en mai 2020. C'est une saturation de disque, pas cette exécution de code, mais la surface est la même.</p>
+<p>En 2024, l'audit externe de PHP, mené par Quarkslab pour OSTIF, retrouve le problème. Aucune exploitation n'est prouvée. L'équipe ne trouve pas de consensus sur la correction, à cause de la compatibilité, de la performance et des extensions tierces, et le dossier s'arrête là. La Fondation parle d'un échec structurel.</p>
+<p>En 2026, les modèles rendent l'exploitabilité démontrable, et le dossier redémarre.</p>
+<p>C'est la leçon la plus utile de l'affaire, et elle n'est pas rassurante pour les tenants d'une IA qui trouverait des choses que personne n'a vues. L'IA n'a pas trouvé une faille inédite. Elle a produit la démonstration qui manquait à une équipe qui savait déjà, et qui n'arrivait pas à trancher. Un défaut non corrigé pendant 2 ans n'était pas un défaut inconnu. C'était un défaut connu, sans preuve d'exploitabilité.</p>
+<h2>L'ampleur, pour situer</h2>
+<p>Environ 70 % des sites web utilisent PHP. VirusTotal a recensé 5,1 millions d'adresses IP servant du PHP, dont 758 000 sur des versions en fin de vie et 85 000 sur les dernières versions d'avant correctif. Cisco Talos estime que la moitié des installations vulnérables pourraient ne jamais être corrigées.</p>
+<p>Les applications touchées le sont indépendamment de la qualité de leur propre code, WordPress, Drupal, Joomla, Magento, MediaWiki, Roundcube, phpMyAdmin, Nextcloud, Laravel, Symfony et WHMCS.</p>
+<p>Les conséquences visibles, ce sont des sites coupés un peu partout dans le monde, l'instance Phabricator de Wikimédia désactivée par précaution, et 391 sites gouvernementaux australiens qui reposent sur Drupal.</p>
+<h2>Ce que l'IA accélère vraiment</h2>
+<p>Le débat sur la vitesse mérite d'être posé proprement, parce qu'il est déjà encombré.</p>
+<p>D'un côté, la fabrication d'exploits semble devenir une affaire d'heures. Le 20 octobre 2026, la fuite commence vers 15 h en temps universel. Le 21 octobre 2026 à 0 h 30, J4ck3LSyN revendique une reproduction testée des 2 failles. Il se rétracte à 3 h 51, en reconnaissant qu'il n'a testé que son propre site, que sa chaîne ne fonctionne pas sur des sites réels, et que ce qu'il a trouvé relève de la corruption mémoire, notée 5,3, et non de l'exécution de code. Une revendication publique, 9 heures après le premier signal, et rien derrière.</p>
+<p>D'un autre côté, un utilisateur de Hacker News affirme avoir retrouvé les 2 défauts à partir des seuls indices publics, vers 5 h 44. L'affirmation est invérifiable, et cohérente avec le reste du dossier. Elle appuie l'idée que la redécouverte était facile une fois la fuite enclenchée.</p>
+<p>Ce qui est établi tient en une phrase. Les modèles ont servi aux 2 découvertes, et ils ont servi à produire les preuves de concept. Ce qui est contesté est la conclusion qu'on en tire souvent, à savoir que l'exploitation en serait devenue banale. Il faut regarder de près la contre-narration.</p>
+<h2>La contre-narration, qui mérite sa place</h2>
+<p>Un article d'Elias Taylor, très discuté, soutient que l'exploitation n'est pas facile. Des milliers de preuves de concept circulent sur GitHub, et aucune ne fonctionne contre une installation PHP standard. Selon lui, les modèles trichent, ils modifient le serveur de test pour le rendre vulnérable, puis présentent la sortie comme une réussite. Il compare avec Log4Shell, Heartbleed, Shellshock et le décodage YAML de Ruby on Rails, où des réseaux de machines attaquaient dans l'heure. Son texte a ensuite été modifié pour ajouter en tête une phrase simple, corrigez vos serveurs quand même.</p>
+<p>Le fil de discussion compte 499 points et 283 commentaires. La critique dominante est que son message revient à dire qu'il n'y a pas besoin de mettre à jour, ce que dirait quelqu'un qui possède un exploit. D'autres rappellent que Wiz a démontré une exécution de code sans authentification sur WordPress, Drupal et Joomla. Un commentateur relève enfin la fabrique de la panique, des organisations citant les experts des réseaux sociaux, une note de 10 reprise partout, un message nocturne du Premier ministre japonais, alors que personne n'avait plus d'information que l'avis initial.</p>
+<p>Les 2 lectures ne s'excluent pas. Une preuve de concept qui échoue sur une installation standard n'annule pas une démonstration réussie sur 3 CMS. Et une démonstration réussie ne prouve pas une attaque de masse.</p>
+<h2>L'embargo cassé, en résumé</h2>
+<p>La sortie coordonnée était fixée au 21 octobre 2026 à 14 h en temps universel, après avoir déjà été avancée d'un jour.</p>
+<p>Le mardi 20 octobre 2026, vers 15 h, les identifiants CVE circulent sur les forums et les réseaux sociaux, avec la fausse note de 10 et une fausse date de sortie. Aucun détail technique. À 15 h 20, un message Tell HN, dont l'auteur s'excusera en affirmant que son contact lui avait dit qu'il n'y avait pas d'embargo. À 16 h 39, Kevin Beaumont signale la fuite. À 18 h 26, watchTowr, partie prenante de l'embargo, confirme publiquement que c'est réel, sans détail. À 19 h 30, PHP pré-annonce et avance la sortie au mercredi 14 h, en se réservant le droit de sortir plus tôt en cas de fuite technique ou d'exploitation. Vers 20 h, Calif publie par erreur une vidéo montrant son outil à l'œuvre, puis la supprime. À 20 h 27, Kirill Firsov, extérieur à Calif, la reposte, et c'est cette copie qui circulera. Avant 21 h 53, l'avis du CERT-UE est en ligne. Vers 23 h, la Fondation envoie des conseils de mitigation à quelques opérateurs d'infrastructures critiques, et reconnaît qu'ils ont pu fuiter. À 23 h 18, Silas Cutler publie une capture de l'outil en fonctionnement, avec une estimation de 1,3 million d'hôtes exposés.</p>
+<p>Le mercredi 21 octobre 2026, à 0 h 20, les réglages PHP vulnérables apparaissent dans les métadonnées d'une page de Sansec. À 0 h 30, la revendication de J4ck3LSyN, supprimée plus tard. À 3 h 02, Cloudflare active par défaut ses règles de filtrage pour tous les plans. À 3 h 51, la rétractation. Au plus tard à 6 h 07, les images conteneur corrigées de Chainguard sont publiques, repérées sur Hacker News. À 6 h 18, Dan Lorenc, directeur général de Chainguard, confirme et assume. À 7 h 41, heure que la Fondation PHP retient pour la rupture de l'embargo, soit au moins 94 minutes après le repérage public. À 7 h 43, le directeur technique de Cloudflare signale des attaques précoces, des tentatives et pas des compromissions, et renvoie à la sortie de 14 h. À 8 h 36, premier capteur d'ELLIO, avec la précision que ses scanners venaient des fuites et non du correctif. À 11 h 26, watchTowr ne voit toujours aucune exploitation réelle. Vers 13 h 30, PHP publie 8.5.12, 8.4.27, 8.3.36 et 8.2.35, une trentaine de minutes en avance. À 14 h 19, watchTowr signale des tentatives actives, aucune réussie. À 16 h 05, première trame réseau ayant la forme de l'attaque par saturation mémoire.</p>
+<p>Le jeudi 22 octobre 2026, vers 0 h 02, les paquets corrigés d'Amazon Linux apparaissent, environ 10 heures et demie après la sortie de PHP. Un utilisateur relève que le binaire a été compilé le 19 octobre 2026, ce qui suggère qu'Amazon avait le correctif construit 2 jours avant.</p>
+<h2>La controverse Chainguard et Fondation PHP</h2>
+<p>Le directeur général de Chainguard affirme que plusieurs fournisseurs présents dans le canal de coordination avaient confirmé des exploitations réelles. Il dit avoir passé un appel vidéo avec des chercheurs, puis décidé seul de publier, en prévenant le groupe.</p>
+<p>Nils Adermann, membre du conseil de la Fondation PHP et présent dans le même canal, répond que c'est faux. Les rapports parlaient de sondages et de tentatives, sans aucune exploitation réussie, y compris à l'heure de la sortie. Il ajoute que Chainguard n'a pas communiqué avec l'équipe PHP. Lorenc maintient sa version sans produire les rapports.</p>
+<p>Ce que les données publiques montrent ne tranche pas, mais pèse. Aucun signal d'exploitation horodaté publiquement n'apparaît avant 6 h 07. La principale preuve de concept publique de la nuit avait été rétractée à 3 h 51. Cloudflare ne parle que de tentatives.</p>
+<p>Le contexte pèse aussi, et pas dans le même sens. Les 5 et 15 juillet 2026, Lorenc avait publié 2 billets, Summer of Clearinghouses puis Follow the Money, soutenant qu'un correctif publié indique aux attaquants où se trouve la faille, et que les termes d'un embargo sont un coût qu'il faut évaluer et raccourcir. Le 22 septembre 2026, Chainguard a modifié sa politique de divulgation pour pouvoir raccourcir ses propres délais en cas d'exploitation active ou d'informations déjà publiques. Cette politique ne couvre pas les correctifs reçus sous embargo en tant que distributeur.</p>
+<p>Plusieurs éléments jouent en sa faveur. Ce qu'elle a publié est le correctif de PHP, rétroporté sur ses propres versions, pas un correctif maison. Les images étaient gratuites, pour tout le monde. Elle n'était pas la seule fuite, entre les identifiants CVE, la confirmation publique de watchTowr, la vidéo de Calif, les réglages dans les métadonnées de Sansec, les conseils de mitigation de la Fondation elle-même et les fournisseurs qui briefaient leurs clients. Et attendre n'a pas suffi, puisque les paquets d'Amazon Linux sont arrivés 10 heures après la sortie.</p>
+<h2>Le point qui ne se tranche pas</h2>
+<p>Amazon affirme avoir détecté une tentative d'exploitation le 17 octobre 2026, 4 jours avant tout, depuis une adresse anonymisée, sur un de ses pots de miel. La chronologie compilée qui sert de base à ce dossier ne la mentionne pas.</p>
+<p>Les 2 lectures restent ouvertes. Si l'affirmation est exacte, la thèse selon laquelle rien ne prouve d'exploitation avant les images de Chainguard s'affaiblit sérieusement. Si elle est fausse, c'est la chronologie qui a raison.</p>
+<p>Je ne tranche pas, et personne ne devrait trancher sur la base des éléments publics disponibles ce jour. Le fait à retenir est qu'une entreprise affirme disposer d'une preuve antérieure, et que la reconstruction la plus citée ne l'intègre pas.</p>
+<h2>Établi, contesté, incertain</h2>
+<p>Ce qui est établi. Les 2 failles sont dans le moteur PHP. Elles ont été découvertes en août 2026 par 2 équipes assistées par des modèles. Une version antérieure du problème était connue en 2004, en 2019 et lors de l'audit de 2024. Les correctifs officiels sont 8.2.35, 8.3.36, 8.4.27 et 8.5.12. La fuite a commencé le 20 octobre 2026 vers 15 h et l'embargo n'a pas tenu jusqu'à 14 h le lendemain.</p>
+<p>Ce qui est contesté. L'existence d'exploitations réussies avant la publication des images de Chainguard. La facilité réelle de l'exploitation, que l'article d'Elias Taylor juge surestimée. La vulnérabilité de PHP-FPM, que Calif affirme et que l'avis officiel ne valide pas au-delà de l'analyse de code.</p>
+<p>Ce qui reste incertain. La tentative du 17 octobre 2026 rapportée par Amazon. L'identité du chercheur qui a prévenu Chainguard le vendredi 16 octobre 2026, et le point de savoir si PHP le savait. Le contenu réel des rapports du canal de coordination. Les heures exactes, qui divergent selon les sources, 6 h 07 ou 7 h 41 pour Chainguard, 13 h 30 ou 14 h pour PHP.</p>
+<h2>Ce que ça change pour vous</h2>
+<p>La faille est dans le moteur, donc la première question n'est pas la qualité de votre code, mais l'état de votre moteur. Quelques vérifications concrètes.</p>
+<ol>
+<li>
+<p>Connaître votre version exacte de PHP, et pas la version annoncée par votre hébergeur dans une plaquette commerciale.</p>
+</li>
+<li>
+<p>Savoir si vous êtes en <code>mod_php</code> ou en PHP-FPM. Sur <code>mod_php</code>, l'attaque passe avant votre application, donc avant tout garde-fou applicatif.</p>
+</li>
+<li>
+<p>Ne pas traiter la divergence PHP-FPM comme une autorisation à attendre. Une analyse de code qui dit vulnérable et un avis qui dit non démontré ne forment pas une preuve d'innocuité.</p>
+</li>
+<li>
+<p>Si vous êtes en 7.4, 8.0 ou 8.1, la décision n'est pas technique mais budgétaire, puisqu'il n'y a pas de binaire officiel. C'est une migration à planifier, pas un correctif à appliquer.</p>
+</li>
+<li>
+<p>Considérer le filtrage en frontal comme un pansement. Cloudflare a activé ses règles par défaut, c'est utile, et cela ne corrige rien.</p>
+</li>
+<li>
+<p>Demander à votre fournisseur la date de compilation des paquets qu'il livre. Sur cette affaire, un binaire compilé 2 jours avant la sortie officielle change la lecture de sa réactivité.</p>
+</li>
+</ol>
+<p>Et une leçon de méthode, valable au-delà de PHP. Un embargo est une promesse que vous ne contrôlez pas. La seule chose que vous contrôlez est le temps entre la disponibilité du correctif et sa pose chez vous. Ce temps-là se mesure, et il se réduit avant l'incident, pas pendant.</p>
+<ol>
+<li>A sourced timeline of the PHP2Shell leak and embargo break, 22 octobre 2026. Reconstruction rapide, assistée par IA, non vérifiée de bout en bout par son auteur. <a href="https://claude.ai/artifact/5cZex56WutyVnpMBrWXxzV">https://claude.ai/artifact/5cZex56WutyVnpMBrWXxzV</a></li>
+<li>GHSA-w8hw-w9fx-j79w, avis officiel PHP sur l'exécution de code par corruption lors d'une saturation mémoire. <a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w">https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w</a></li>
+<li>GHSA-6wmf-4rv5-p3rp, avis officiel PHP sur l'exécution de code par état global périmé. <a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp">https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp</a></li>
+<li>Fondation PHP, Today's PHP Security Release, and How We're Strengthening PHP Security, 21 octobre 2026. <a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/">https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/</a></li>
+<li>Pré-annonce PHP du 20 octobre 2026. <a href="https://news-web.php.net/php.announce/509">https://news-web.php.net/php.announce/509</a></li>
+<li>CERT-UE, avis 2026-018. <a href="https://cert.europa.eu/publications/security-advisories/2026-018/">https://cert.europa.eu/publications/security-advisories/2026-018/</a></li>
+<li>Calif, récit et détails techniques. <a href="https://calif.io/php2shell/">https://calif.io/php2shell/</a></li>
+<li>OpenAI, programme Patch the Planet. <a href="https://openai.com/index/patch-the-planet/">https://openai.com/index/patch-the-planet/</a></li>
+<li>OpenAI, divulgation coordonnée. <a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities">https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities</a></li>
+<li>Wiz, analyse et démonstrations. <a href="https://www.wiz.io/blog/php2shell-php-rce">https://www.wiz.io/blog/php2shell-php-rce</a></li>
+<li>Cloudflare, filtration et observations. <a href="https://blog.cloudflare.com/php-vulnerabilities-waf-protection">https://blog.cloudflare.com/php-vulnerabilities-waf-protection</a></li>
+<li>Sansec, recherche. <a href="https://sansec.io/research/php2shell">https://sansec.io/research/php2shell</a></li>
+<li>watchTowr, note d'analyse. <a href="https://watchtowr.com/intelligence/php-remote-code-execution-php2shell/">https://watchtowr.com/intelligence/php-remote-code-execution-php2shell/</a></li>
+<li>The Register, PHP blames supply chain security biz Chainguard, 22 octobre 2026. <a href="https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611">https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611</a></li>
+<li>Socket, PHP Foundation Says Chainguard Broke Security Embargo. <a href="https://socket.dev/blog/php-embargo-dispute">https://socket.dev/blog/php-embargo-dispute</a></li>
+<li>The Record, PHP says AI review of critical bugs first sparked alarm in August. <a href="https://therecord.media/php-foundation-statement-critical-vulnerabilities">https://therecord.media/php-foundation-statement-critical-vulnerabilities</a></li>
+<li>Billet de Dan Lorenc et échanges en commentaires. <a href="https://www.linkedin.com/posts/danlorenc_i-wanted-to-share-what-happened-with-the-share-7518756991520120832-QX2_/">https://www.linkedin.com/posts/danlorenc_i-wanted-to-share-what-happened-with-the-share-7518756991520120832-QX2_/</a></li>
+<li>Politique de divulgation de Chainguard. <a href="https://www.chainguard.dev/legal/coordinated-vulnerability-handling-policy">https://www.chainguard.dev/legal/coordinated-vulnerability-handling-policy</a></li>
+<li>Chainguard, Summer of Clearinghouses, 5 juillet 2026. <a href="https://www.chainguard.dev/unchained/summer-of-clearinghouses">https://www.chainguard.dev/unchained/summer-of-clearinghouses</a></li>
+<li>Chainguard, Follow the Money, 15 juillet 2026. <a href="https://www.chainguard.dev/unchained/follow-the-money">https://www.chainguard.dev/unchained/follow-the-money</a></li>
+<li>Amazon, détection avant divulgation sur pots de miel. <a href="https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/">https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/</a></li>
+<li>Amazon, bulletin de sécurité 2026-143. <a href="https://aws.amazon.com/security/security-bulletins/2026-143-aws/">https://aws.amazon.com/security/security-bulletins/2026-143-aws/</a></li>
+<li>ELLIO, observations de capteurs. <a href="https://ellio.tech/en/blog/php2shell-what-we-observed-and-what-to-do/">https://ellio.tech/en/blog/php2shell-what-we-observed-and-what-to-do/</a></li>
+<li>Huntress, réponse rapide. <a href="https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities">https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities</a></li>
+<li>Elias Taylor, There isn't an easy exploit for this PHP vulnerability. <a href="https://eliastaylor.com/noexploit/">https://eliastaylor.com/noexploit/</a></li>
+<li>Discussion Hacker News sur cet article. <a href="https://news.ycombinator.com/item?id=50188948">https://news.ycombinator.com/item?id=50188948</a></li>
+<li>Bogue PHP 78876. <a href="https://bugs.php.net/bug.php?id=78876">https://bugs.php.net/bug.php?id=78876</a></li>
+<li>The Guardian, What is PHP, and how bad is the computer language flaw, 22 octobre 2026. <a href="https://www.theguardian.com/technology/2026/oct/22/what-is-php-computer-language-flaw-causing-global-website-shutdowns">https://www.theguardian.com/technology/2026/oct/22/what-is-php-computer-language-flaw-causing-global-website-shutdowns</a></li>
+</ol>
+
+
+    
+    <div class="article-tags">
+      
+        
+      
+        
+        <span class="article-tag">php</span>
+        
+      
+        
+        <span class="article-tag">vulnérabilité</span>
+        
+      
+        
+        <span class="article-tag">embargo</span>
+        
+      
+        
+      
+    </div>
+    
+  </article>
+
+  <!-- Appel a l'action : fin d'article, fin de page de section, accueil.
+     Pour le retirer du site, passer "cta" a false dans src/_data/site.json. -->
+
+<div class="cta-block">
+  <p class="cta-phrase">Le premier échange dure quinze minutes. Je vous dis ce que je peux faire pour vous, et ce que je ne peux pas.</p>
+  <p class="cta-liens">
+    <a href="mailto:debian@karlesnine.com">debian@karlesnine.com</a>
+    <span class="cta-sep">·</span>
+    <a href="https://www.linkedin.com/in/charleschristiancroix/" target="_blank" rel="noopener noreferrer">linkedin.com/in/charleschristiancroix</a>
+  </p>
+</div>
+
+
+
+  <nav class="secondary-nav">
+    
+    
+  </nav>
+
+  <footer class="footer">
+  <p>&copy; Design: <a href="https://html5up.net">HTML5 UP</a> — Adaptation: Karlesnine — Propulsé par <a href="https://www.11ty.dev/">11ty</a>
+— <a href="/feed.xml">S'abonner au flux RSS</a>
+— <a href="/mentions-legales-et-confidentialite/">Mentions légales et confidentialité</a>
+    — <a href="#" id="consent-reset" onclick="k9DeleteCookies(); return false;">Gérer les cookies</a>
+  </p>
+  <p class="footer-ai-note">Les contenus de ce site sont préparés avec l'assistance d'outils d'IA générative, puis relus, corrigés et validés sur le fond par l'auteur.</p>
+</footer>
+
+
+</div>
+
+
+  <!-- BG -->
+  <div id="bg"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <!-- Theme toggle -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const bg = document.getElementById('bg');
+      const current = html.getAttribute('data-theme');
+      if (current === 'light') {
+        html.removeAttribute('data-theme');
+        btn.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+        if (bg) bg.style.display = '';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+        if (bg) bg.style.display = 'none';
+      }
+    }
+
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const btn = document.getElementById('themeToggle');
+      const bg = document.getElementById('bg');
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (btn) btn.textContent = '\u{2600}\u{FE0F}';
+        if (bg) bg.style.display = 'none';
+      }
+    })();
+  </script>
+
+  <!-- Bannière de consentement cookies (RGPD / CNIL) -->
+  <div id="consent-banner" role="dialog" aria-live="polite" aria-label="Consentement des cookies">
+    <p>Ce site utilise Google Analytics pour mesurer son audience. Les cookies de mesure ne sont déposés qu'avec votre accord. Vous pouvez accepter ou refuser : le site reste utilisable dans les deux cas. <a href="/mentions-legales-et-confidentialite/">En savoir plus</a></p>
+    <div class="consent-actions">
+      <button id="consent-accept" type="button">Accepter</button>
+      <button id="consent-refuse" type="button">Refuser</button>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var GA_ID = 'G-ZEYZPP00HG';
+    var KEY = 'k9_consent';
+    var MAX_AGE_MS = 395 * 24 * 60 * 60 * 1000; // 13 mois
+
+    function loadGA() {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+
+    function hideBanner() {
+      var banner = document.getElementById('consent-banner');
+      if (banner) { banner.style.display = 'none'; }
+    }
+
+    function readChoice() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) { return null; }
+        var data = JSON.parse(raw);
+        if (!data || (data.c !== 'accepted' && data.c !== 'refused')) { return null; }
+        if (Date.now() - data.t > MAX_AGE_MS) { return null; }
+        return data.c;
+      } catch (e) { return null; }
+    }
+
+    function apply(choice) {
+      try { localStorage.setItem(KEY, JSON.stringify({ c: choice, t: Date.now() })); } catch (e) {}
+      hideBanner();
+      if (choice === 'accepted') { loadGA(); }
+    }
+
+    function showBanner() {
+      var banner = document.getElementById('consent-banner');
+      if (banner) { banner.style.display = 'flex'; }
+      if (banner && !banner.getAttribute('data-bound')) {
+        banner.setAttribute('data-bound', '1');
+        var accept = document.getElementById('consent-accept');
+        var refuse = document.getElementById('consent-refuse');
+        if (accept) { accept.addEventListener('click', function() { apply('accepted'); }); }
+        if (refuse) { refuse.addEventListener('click', function() { apply('refused'); }); }
+      }
+    }
+
+    function removeConsentCookies() {
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      var toDelete = ['_ga', '_gid'];
+      try {
+        var parts = document.cookie.split(';');
+        for (var i = 0; i < parts.length; i++) {
+          var name = parts[i].split('=')[0].trim();
+          if (name && name.indexOf('_ga') === 0 && toDelete.indexOf(name) === -1) { toDelete.push(name); }
+        }
+      } catch (e) {}
+      for (var j = 0; j < toDelete.length; j++) {
+        document.cookie = toDelete[j] + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
+      }
+    }
+
+    window.k9DeleteCookies = function() {
+      removeConsentCookies();
+      showBanner();
+    };
+
+    var stored = readChoice();
+
+    if (stored === 'accepted') {
+      hideBanner();
+      loadGA();
+    } else if (stored === 'refused') {
+      hideBanner();
+    } else {
+      showBanner();
+    }
+  })();
+  </script>
+
+</body>
+</html>
