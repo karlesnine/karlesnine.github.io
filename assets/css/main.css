@@ -2202,6 +2202,18 @@ h1.major { font-size: 1.5rem; line-height: 1.4; }
   text-align: center;
 }
 .cta-block .cta-phrase { margin: 0 0 0.9rem 0; color: var(--text); }
+.cta-block .cta-action { margin: 0 0 0.8rem 0; }
+.cta-block .cta-bouton {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.cta-block .cta-bouton:hover { opacity: 0.85; text-decoration: none; }
 .cta-block .cta-liens { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
 .cta-block .cta-liens a { color: var(--accent); text-decoration: none; }
 .cta-block .cta-liens a:hover { text-decoration: underline; }
