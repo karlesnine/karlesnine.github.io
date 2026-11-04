@@ -5,8 +5,16 @@
     <link>https://www.karlesnine.com/</link>
     <description>Articles et retours d'expérience sur l'intelligence artificielle, la cybersécurité et le facteur humain en crise informatique.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.karlesnine.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La fuite de données de la DGFiP n&#39;a été détectée par personne, et le rapport de l&#39;ANSSI dit pourquoi</title>
+      <link>https://www.karlesnine.com/formation-cybersecurite/2026-11-04.rapport-anssi-dgfip-7-semaines/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
+      <guid isPermaLink="true">https://www.karlesnine.com/formation-cybersecurite/2026-11-04.rapport-anssi-dgfip-7-semaines/</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <category>formation-cybersecurite</category>
+      <description>Le rapport d&#39;incident du 23 septembre 2026 décrit 7 semaines d&#39;alertes traitées sans que l&#39;exfiltration soit vue. Ce que ce cas dit de nos organisations.</description>
+    </item>
     <item>
       <title>Quand l&#39;IA rouvre une faille que PHP connaissait depuis 22 ans</title>
       <link>https://www.karlesnine.com/formation-cybersecurite/2026-10-22.php2shell-faille-moteur-php/?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=flux-rss</link>
